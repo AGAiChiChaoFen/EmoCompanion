@@ -16,57 +16,49 @@
   <img src="https://img.shields.io/badge/Streaming-WebRTC-F97316" alt="WebRTC streaming" />
 </p>
 
-<p align="center"><a href="#project-overview">Overview</a> · <a href="#ditto-checkpoints">Ditto checkpoints</a> · <a href="#personavlm-setup">PersonaVLM setup</a> · <a href="#system-startup">System startup</a> · <a href="#reproduction-status">Reproduction status</a></p>
+<p align="center"><a href="#project-overview">Overview</a> · <a href="#ditto-checkpoints">Ditto checkpoints</a> · <a href="#personavlm-setup">PersonaVLM setup</a> · <a href="#system-startup">System startup</a></p>
 
 ---
 
-## Changelog
+## 📰 NEWS
 
-| Date | Update |
-| --- | --- |
-| 2026-10-14 | Added the reference GPU environment: NVIDIA RTX PRO 6000. |
-| 2026-10-13 | Removed competition-demo leftovers while retaining the national-finals real-time interaction code; standardized the project name as EmoCompanion and the frontend directory as `web/`. |
-| 2026-10-13 | Added official Ditto and PersonaVLM checkpoint, paper, startup, and external-service documentation. |
+Future releases and feature updates will be announced here.
 
-## System architecture
+## 🏗️ System architecture
 
 <p align="center">
   <img src="docs/system_architecture.png" alt="EmoCompanion system architecture" width="100%" />
 </p>
 
-**Figure 1.** The paper's overall architecture: multimodal emotion analysis, cognitive intervention, presentation and interaction, data construction with a psychological knowledge base, and the user profile form the emotional-care loop. This is the paper-level system view; concrete services, models, and external dependencies are specified in the configuration sections below.
+**Figure 1.** The paper's overall architecture: multimodal emotion analysis, cognitive intervention, presentation and interaction, data construction with a psychological knowledge base, and the user profile form the emotional-care loop.
 
 <a id="project-overview"></a>
 
-## Project overview
+## 💬 Project overview
 
 EmoCompanion targets everyday emotional support and long-term companionship. Its service pipeline follows “perception, retrieval, reasoning, expression, and memory update”. Given text, audio, or video input, it combines multimodal emotional cues, personal interaction history, and psychological knowledge to generate a response, then delivers it through speech synthesis and a Ditto-driven real-time avatar.
 
-The paper focuses on integrating multimodal perception, psychological knowledge, personal long-term memory, selective memory updates, and avatar output into an executable service chain rather than retraining a foundation model. The current code is based on the national competition implementation; paper descriptions, historical demonstration metrics, and reproducible measurements from this repository must be distinguished.
+Long-term memory carries user experiences, preferences, and conversation history into subsequent interactions. Shared psychological knowledge provides context for response generation, while selective memory updates help future conversations build on previous exchanges. Personal memory and shared knowledge are managed separately.
 
-## Overview
-
-This repository contains the code for *Beyond Reactive Comfort: A Knowledge-Enhanced Multimodal Agent with Long-Term Memory for Proactive Emotional Care*. It is based on the national competition implementation and retains the third-party component directories `LiveTalking`, `ditto-talkinghead`, and `PersonaVLM`.
-
-## Repository layout
+## 📂 Repository layout
 
 - `web/`: Vue frontend, normally served at `http://localhost:9010`.
 - `LiveTalking/`: application APIs, WebRTC, TTS, ASR/emotion interfaces, and LightRAG forwarding.
-- `Audio-Emotion-Analysis/`: separately managed uv service with local Qwen2-Audio ASR/emotion and DeepFace, plus a cloud PersonaVLM adapter and inactive EmoLLM/TTS resources. See the [service analysis](docs/Audio服务代码分析_20261014.md).
+- `Audio-Emotion-Analysis/`: Qwen2-Audio transcription and emotion analysis, plus DeepFace facial emotion analysis.
 - `ditto-talkinghead/`: Ditto inference implementation called by LiveTalking.
 - `PersonaVLM/`: long-term memory and personalized response API.
 - `config.env.example`: a credential-free Linux/WSL configuration template; copy it to the local, ignored `config.env` and fill in the values. `start_emocompanion.sh` is the integrated launcher.
 
-## Official implementations and papers
+## 🙏 Acknowledgments
 
 - Ditto: [code](https://github.com/antgroup/ditto-talkinghead), [paper](https://arxiv.org/abs/2411.19509), [Hugging Face checkpoints](https://huggingface.co/digital-avatar/ditto-talkinghead).
 - PersonaVLM: [code](https://github.com/MiG-NJU/PersonaVLM), [paper](https://arxiv.org/abs/2604.13074), [Hugging Face checkpoints](https://huggingface.co/ClareNie/PersonaVLM).
 
-This project integrates these components without retraining them. The official standalone demos, training datasets, and evaluation datasets are not required for this application.
+We thank these open-source projects for their models and inference implementations.
 
 <a id="ditto-checkpoints"></a>
 
-## Ditto checkpoints
+## 🎭 Ditto checkpoints
 
 The source tree does not retain these large files. Download them from ModelScope first, then use the directory layout below as the deployment target.
 
@@ -85,7 +77,7 @@ The required files include `ditto_cfg/v0.4_hubert_cfg_pytorch.pkl`, the auxiliar
 
 <a id="personavlm-setup"></a>
 
-## PersonaVLM setup
+## 🧠 PersonaVLM setup
 
 After deployment, `PersonaVLM/checkpoints/rl`, CLIP, and MiniLM must be present. The source tree does not retain these large files; restore them using the [ModelScope resource download](#modelscope-resources) section.
 
@@ -113,7 +105,7 @@ Verify `GET http://127.0.0.1:9001/ready` returns HTTP 200. A healthy `/health` r
 
 <a id="modelscope-resources"></a>
 
-## Download project resources from ModelScope
+## 📦 Download project resources from ModelScope
 
 All project checkpoints are published in the [AGAiChiChaoFen/EmoCompanion](https://modelscope.cn/datasets/AGAiChiChaoFen/EmoCompanion) dataset repository. It contains Ditto, PersonaVLM, CLIP, MiniLM, Qwen2-Audio, Qwen3-TTS, EmoLLM, and DeepFace resources. The downloaded `checkpoints/`, `PersonaVLM/`, and `Audio-Emotion-Analysis/` directories should be merged directly into the project root; do not add an extra `EmoCompanion-resources/` directory level.
 
@@ -149,27 +141,53 @@ robocopy D:\EmoCompanion-resources\Audio-Emotion-Analysis .\Audio-Emotion-Analys
 
 The commands merge files and do not use `/MIR`, so they do not delete existing project files. After merging, check `checkpoints/ditto_pytorch/`, `PersonaVLM/checkpoints/rl/`, `PersonaVLM/checkpoints/openai-clip/`, `PersonaVLM/checkpoints/sentence-transformers/all-MiniLM-L6-v2/`, `Audio-Emotion-Analysis/audio_emotion/pretrained_models/`, `Audio-Emotion-Analysis/deepface_weights/`, and `Audio-Emotion-Analysis/checkpoints/`.
 
-Verify the main-project resources with:
+Configure Audio model paths in `Audio-Emotion-Analysis/.env`, using `deployment.env.example` as a template. Third-party model licenses and usage terms are described in `WEIGHTS_README.md` in the downloaded resources.
+
+## 🛠️ Environment and service configuration
+
+The reference environment uses Ubuntu 24.04, Python 3.10, CUDA 12.8, and an NVIDIA RTX PRO 6000. Prepare Conda, FFmpeg, a CUDA-compatible PyTorch build, Node.js 18+, and npm.
+
+Install dependencies per service: `LiveTalking/requirements.txt` for LiveTalking and `PersonaVLM/requirements.txt` for PersonaVLM. Use separate Conda environments because they specify different Transformers versions. Set the launcher's `CONDA_ENV_NAME` to the LiveTalking environment.
+
+### 🎙️ Qwen2-Audio and DeepFace
+
+In a separate terminal, run from the project root:
 
 ```bash
-cd EmoCompanion
-python scripts/verify_resources.py --hash
+cd Audio-Emotion-Analysis
+cp deployment.env.example .env
+uv sync --python 3.10
+uv run --python 3.10 python -m src.api.main
 ```
 
-This check covers the main Ditto, PersonaVLM, CLIP, and MiniLM resources. The Audio service resource manifest and SHA-256 list are in `weights_manifest.json`; configure its paths using `Audio-Emotion-Analysis/deployment.env.example`. The resource repository excludes `.env` files, access tokens, user memories, and runtime logs. Original third-party licenses remain applicable; see `WEIGHTS_README.md` in the downloaded snapshot.
+Before starting, set `MODEL_PATH_QWEN_QWEN2_AUDIO_7B_INSTRUCT` and `DEEPFACE_HOME` in `.env` to the Qwen2-Audio model and DeepFace weights. This service provides transcription, speech emotion analysis, and facial emotion analysis.
+
+### ⚙️ LiveTalking configuration
+
+Copy the project-level `config.env.example` to `config.env` and configure:
+
+- **Environment and avatar**: `CONDA_SH`, `CONDA_ENV_NAME`, `CUDA_VISIBLE_DEVICES`, and the three `DITTO_*` paths above. Set `TENSORRT_LIB_DIR` when using TensorRT.
+- **Conversation and memory**: `PERSONA_API_MODEL_PATH`, `PERSONA_API_OUTPUT_ROOT`, and `LLM_PROVIDER="personavlm"`. Start PersonaVLM in its own environment as described above, then set `PERSONA_API_ENABLE="0"` so the main service connects to the running memory service.
+- **Perception**: point `QWENAUDIO_API_URL` to the Audio service's `/asr` route and `DEEPFACE_API_URL` to its base URL, for example `http://127.0.0.1:9100/asr` and `http://127.0.0.1:9100`.
+- **Psychological knowledge**: deploy LightRAG, import the knowledge documents, and set `LIGHTRAG_BASE_URL` and authentication settings.
+- **Speech and networking**: supply DashScope/Qwen TTS credentials. For public-network WebRTC, configure the TURN server, credentials, and server forwarding rules.
 
 <a id="system-startup"></a>
 
-## System startup
+## 🚀 System startup
 
-The integrated launcher targets Linux/WSL, not native PowerShell. Copy `config.env.example` to the local `config.env` first, then configure the Conda path and environment, GPU, ports, model paths, external service URLs, and credential placeholders.
+Start PersonaVLM, Audio, and LightRAG and complete the configuration above. Then run in the main service's Conda environment:
 
 ```bash
 cd EmoCompanion
 bash start_emocompanion.sh
 ```
 
-The script starts PersonaVLM on port 9001 and LiveTalking on port 9000 by default. Start the frontend separately:
+The launcher loads Ditto and starts LiveTalking using `config.env`.
+
+### 🌐 Frontend
+
+Copy `web/.env.example` to `web/.env`. Set `VITE_API_BASE_URL` and `VITE_PERSONA_API_BASE_URL` to browser-accessible LiveTalking and PersonaVLM addresses, and select a user with `VITE_PERSONA_USER_NAME`. Then run:
 
 ```bash
 cd EmoCompanion/web
@@ -177,25 +195,4 @@ npm install
 npm run dev -- --host 0.0.0.0 --port 9010
 ```
 
-Open `http://localhost:9010/integrated-system`. `npm run build` only builds the frontend; it does not start model or backend services.
-
-<a id="reproduction-status"></a>
-
-## Remaining reproduction requirements
-
-The repository is not currently an end-to-end runnable package without additional setup:
-
-1. Model files have been removed from this local source tree and are published in [AGAiChiChaoFen/EmoCompanion](https://modelscope.cn/datasets/AGAiChiChaoFen/EmoCompanion). Download the model files and place them in the directory structure described above.
-2. The reference hardware is an NVIDIA RTX PRO 6000. Also prepare Linux/WSL, CUDA, compatible PyTorch/TensorRT/FFmpeg dependencies, and a Conda environment. Other GPUs require a fresh check of memory, CUDA, TensorRT, and bfloat16 support.
-3. Keep dependency versions isolated: PersonaVLM requires `transformers==4.51.3`, while `LiveTalking/requirements.txt` pins `transformers==4.46.2`.
-4. Deploy the included `Audio-Emotion-Analysis` service with its own uv environment and updated model paths; its `/asr` contract matches `QWENAUDIO_API_URL`.
-5. The included DeepFace `/face-emotion` runs in the same port-9100 service. Align `DEEPFACE_API_URL` at deployment, or retain the original separate port-9020 service.
-6. Prepare the LightRAG service and knowledge base configured by `LIGHTRAG_BASE_URL` (port 9622 by default).
-7. Configure valid Qwen3-TTS/DashScope credentials and a reachable TURN service for public-network WebRTC.
-8. Default portrait and voice/avatar assets are included. Scripted demo memories are excluded; actual interactions populate user memory. Select the frontend user with `VITE_PERSONA_USER_NAME`. The current Persona HTTP route sends text and emotion; upstream image-memory extensions still require GroundingDINO dependencies.
-
-Main-project resource integrity, frontend build, and regression checks were verified earlier. ASR and DeepFace sources and weights are now included and statically checked; existing integration settings are preserved. The archive contains EmoLLM, not Emotion-LLaMA, and its EmoLLM/TTS routes are inactive. GPU inference and end-to-end operation still require deployment testing.
-
-## Archived materials
-
-Legacy deployment notes, prerecorded videos, unused mock data, and recording scripts are stored under `清理暂存/` at the paper project root and are not used at runtime.
+Open `http://localhost:9010/integrated-system` to begin text, audio, or video interactions.
