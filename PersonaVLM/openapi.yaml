@@ -1,0 +1,279 @@
+openapi: 3.1.0
+info:
+  title: PersonaVLM 记忆与推理 API
+  version: 1.0.0
+  description: 读取 PersonaVLM 用户记忆，并通过文本消息调用 Agent 推理和更新记忆。
+servers:
+  - url: http://127.0.0.1:9001
+paths:
+  /health:
+    get:
+      summary: 存活检查
+      responses:
+        "200":
+          description: 服务进程正常
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/SuccessEnvelope"
+  /ready:
+    get:
+      summary: 就绪检查
+      responses:
+        "200":
+          description: 模型文件和服务配置就绪
+        "503":
+          description: 模型文件尚未就绪
+  /api/v1/users:
+    get:
+      summary: 分页获取已有记忆的用户
+      parameters:
+        - $ref: "#/components/parameters/Page"
+        - $ref: "#/components/parameters/PerPage"
+      responses:
+        "200":
+          description: 用户列表
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/PaginatedEnvelope"
+  /api/v1/users/{userName}/memory:
+    get:
+      summary: 获取完整用户记忆文件
+      parameters:
+        - $ref: "#/components/parameters/UserName"
+      responses:
+        "200":
+          description: 完整 user_data.json 内容
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/SuccessEnvelope"
+        "404":
+          $ref: "#/components/responses/NotFound"
+  /api/v1/users/{userName}/memory-summary:
+    get:
+      summary: 获取记忆摘要和数量
+      parameters:
+        - $ref: "#/components/parameters/UserName"
+      responses:
+        "200":
+          description: 记忆摘要
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/SuccessEnvelope"
+        "404":
+          $ref: "#/components/responses/NotFound"
+  /api/v1/users/{userName}/profiles:
+    get:
+      summary: 分页获取画像版本
+      parameters:
+        - $ref: "#/components/parameters/UserName"
+        - $ref: "#/components/parameters/Page"
+        - $ref: "#/components/parameters/PerPage"
+      responses:
+        "200":
+          $ref: "#/components/responses/Paginated"
+        "404":
+          $ref: "#/components/responses/NotFound"
+  /api/v1/users/{userName}/personality-history:
+    get:
+      summary: 分页获取逐轮大五人格历史
+      parameters:
+        - $ref: "#/components/parameters/UserName"
+        - $ref: "#/components/parameters/Page"
+        - $ref: "#/components/parameters/PerPage"
+      responses:
+        "200":
+          $ref: "#/components/responses/Paginated"
+        "404":
+          $ref: "#/components/responses/NotFound"
+  /api/v1/users/{userName}/semantic-memories:
+    get:
+      summary: 分页获取逐轮信息判断
+      parameters:
+        - $ref: "#/components/parameters/UserName"
+        - $ref: "#/components/parameters/Page"
+        - $ref: "#/components/parameters/PerPage"
+        - name: decision
+          in: query
+          schema:
+            type: string
+            enum: [all, "true", "false"]
+            default: all
+      responses:
+        "200":
+          $ref: "#/components/responses/Paginated"
+        "404":
+          $ref: "#/components/responses/NotFound"
+        "422":
+          $ref: "#/components/responses/ValidationError"
+  /api/v1/users/{userName}/episodic-memories:
+    get:
+      summary: 分页获取生活主题
+      parameters:
+        - $ref: "#/components/parameters/UserName"
+        - $ref: "#/components/parameters/Page"
+        - $ref: "#/components/parameters/PerPage"
+      responses:
+        "200":
+          $ref: "#/components/responses/Paginated"
+        "404":
+          $ref: "#/components/responses/NotFound"
+  /api/v1/users/{userName}/procedural-memories:
+    get:
+      summary: 分页获取习惯与目标版本
+      parameters:
+        - $ref: "#/components/parameters/UserName"
+        - $ref: "#/components/parameters/Page"
+        - $ref: "#/components/parameters/PerPage"
+      responses:
+        "200":
+          $ref: "#/components/responses/Paginated"
+        "404":
+          $ref: "#/components/responses/NotFound"
+  /api/v1/users/{userName}/interactions:
+    get:
+      summary: 分页获取原始对话
+      parameters:
+        - $ref: "#/components/parameters/UserName"
+        - $ref: "#/components/parameters/Page"
+        - $ref: "#/components/parameters/PerPage"
+        - name: session_index
+          in: query
+          schema:
+            type: integer
+            minimum: 0
+      responses:
+        "200":
+          $ref: "#/components/responses/Paginated"
+        "404":
+          $ref: "#/components/responses/NotFound"
+        "422":
+          $ref: "#/components/responses/ValidationError"
+  /api/v1/users/{userName}/messages:
+    post:
+      summary: 执行文本推理并更新用户记忆
+      parameters:
+        - $ref: "#/components/parameters/UserName"
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/MessageRequest"
+      responses:
+        "201":
+          description: 推理完成并已更新记忆
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/SuccessEnvelope"
+        "422":
+          $ref: "#/components/responses/ValidationError"
+        "503":
+          description: 模型或 Agent 尚未就绪
+  /api/v1/users/{userName}/agent-cache:
+    delete:
+      summary: 清除指定用户的 Agent 缓存
+      parameters:
+        - $ref: "#/components/parameters/UserName"
+      responses:
+        "200":
+          description: 缓存清理结果
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/SuccessEnvelope"
+components:
+  parameters:
+    UserName:
+      name: userName
+      in: path
+      required: true
+      schema:
+        type: string
+        maxLength: 100
+    Page:
+      name: page
+      in: query
+      schema:
+        type: integer
+        minimum: 1
+        default: 1
+    PerPage:
+      name: per_page
+      in: query
+      schema:
+        type: integer
+        minimum: 1
+        maximum: 100
+        default: 20
+  schemas:
+    MessageRequest:
+      type: object
+      required: [query]
+      additionalProperties: false
+      properties:
+        query:
+          type: string
+          minLength: 1
+          maxLength: 10000
+        time:
+          type: string
+          pattern: "^[0-9]{4}-[0-9]{2}-[0-9]{2} [0-9]{2}:[0-9]{2}$"
+        personality:
+          type: object
+          additionalProperties: false
+          properties:
+            openness: { type: number, minimum: 1, maximum: 5 }
+            conscientiousness: { type: number, minimum: 1, maximum: 5 }
+            extraversion: { type: number, minimum: 1, maximum: 5 }
+            agreeableness: { type: number, minimum: 1, maximum: 5 }
+            neuroticism: { type: number, minimum: 1, maximum: 5 }
+    SuccessEnvelope:
+      type: object
+      required: [data, meta]
+      properties:
+        data: {}
+        meta:
+          type: object
+          properties:
+            request_id: { type: string }
+            timestamp: { type: string, format: date-time }
+    PaginatedEnvelope:
+      allOf:
+        - $ref: "#/components/schemas/SuccessEnvelope"
+    Problem:
+      type: object
+      required: [type, title, status, detail, request_id]
+      properties:
+        type: { type: string }
+        title: { type: string }
+        status: { type: integer }
+        detail: { type: string }
+        instance: { type: string }
+        request_id: { type: string }
+        errors:
+          type: array
+          items: { type: object }
+  responses:
+    Paginated:
+      description: 分页查询成功
+      content:
+        application/json:
+          schema:
+            $ref: "#/components/schemas/PaginatedEnvelope"
+    NotFound:
+      description: 用户记忆不存在
+      content:
+        application/json:
+          schema:
+            $ref: "#/components/schemas/Problem"
+    ValidationError:
+      description: 参数校验失败
+      content:
+        application/json:
+          schema:
+            $ref: "#/components/schemas/Problem"

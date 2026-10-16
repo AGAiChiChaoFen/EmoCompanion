@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+  <defs>
+    <linearGradient id="heartGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#ff6b81;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#ec4899;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#8a2be2;stop-opacity:1" />
+    </linearGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="2" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+  
+  <!-- 背景圆形 -->
+  <circle cx="50" cy="50" r="48" fill="url(#heartGradient)" opacity="0.1"/>
+  
+  <!-- 心形主体 -->
+  <path d="M50,85 C50,85 20,60 20,40 C20,30 25,25 32,25 C38,25 44,30 50,38 C56,30 62,25 68,25 C75,25 80,30 80,40 C80,60 50,85 50,85 Z" 
+        fill="url(#heartGradient)" 
+        filter="url(#glow)"/>
+  
+  <!-- 心电图线条 -->
+  <path d="M25,50 L35,50 L40,35 L45,65 L50,50 L55,50 L60,40 L65,60 L70,50 L75,50" 
+        stroke="#ffffff" 
+        stroke-width="2" 
+        fill="none" 
+        opacity="0.8"
+        stroke-linecap="round"
+        stroke-linejoin="round">
+    <animate attributeName="stroke-dasharray" 
+             from="0,100" 
+             to="100,0" 
+             dur="2s" 
+             repeatCount="indefinite"/>
+  </path>
+</svg>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="EmoCompanion - 知识增强、多模态与长期记忆驱动的情感关怀系统" />
+    <meta name="keywords" content="AI伴侣,情感陪护,数字人,语音交互,情感识别" />
+    <title>EmoCompanion - 情感关怀系统</title>
+
+    <!--
+      字体资源：
+      1) Manrope 负责英文与数字，保证现代感；
+      2) Noto Sans SC 负责中文，保证各平台显示稳定。
+    -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@500;600;700&family=Noto+Sans+SC:wght@400;500;700&display=swap" rel="stylesheet">
+
+    <!-- Bootstrap：提供基础栅格与通用工具类（当前项目只按需使用其中一部分能力）。 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Bootstrap Icons：按钮和状态图标均来自该图标库。 -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css">
+
+    <!--
+      WebRTC 客户端脚本（非模块化脚本）：
+      暴露 window.start / window.stop / window.configurePublishMedia 等全局方法，
+      供 Vue 组件在运行期调用。
+    -->
+    <script src="/client.js"></script>
+  </head>
+  <body>
+    <!-- Vue 根挂载点：src/main.js 会把根组件挂到该节点。 -->
+    <div id="app"></div>
+
+    <!-- Vite 入口模块：启动 Vue 应用。 -->
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>

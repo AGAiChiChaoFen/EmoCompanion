@@ -1,0 +1,786 @@
+/* 实时集成系统页面主题样式覆盖 */
+
+/* 日间主题 - 媒体舞台区域 */
+[data-theme="day"] .callscape .media-stage {
+    background: linear-gradient(135deg, rgba(224, 242, 254, 0.95) 0%, rgba(219, 234, 254, 0.9) 100%) !important;
+    border: 1px solid rgba(59, 130, 246, 0.3) !important;
+    box-shadow: 0 8px 32px rgba(59, 130, 246, 0.15), inset 0 0 0 1px rgba(59, 130, 246, 0.1) !important;
+}
+
+[data-theme="day"] .callscape .stage-aura {
+    background: radial-gradient(circle at 50% 50%, rgba(59, 130, 246, 0.15), transparent 70%) !important;
+}
+
+[data-theme="day"] .callscape .video-placeholder {
+    color: var(--theme-text-primary) !important;
+    background: radial-gradient(circle at 55% 15%, rgba(224, 242, 254, 0.95) 0%, rgba(219, 234, 254, 0.9) 65%, rgba(186, 230, 253, 0.85) 100%) !important;
+}
+
+[data-theme="day"] .callscape .placeholder-logo {
+    background: linear-gradient(135deg, rgba(59, 130, 246, 0.2), rgba(6, 182, 212, 0.15)) !important;
+    color: var(--theme-primary) !important;
+    box-shadow: 0 0 0 1px rgba(59, 130, 246, 0.4), 0 0 80px rgba(59, 130, 246, 0.3) !important;
+}
+
+[data-theme="day"] .callscape .placeholder-logo i {
+    color: var(--theme-primary) !important;
+}
+
+[data-theme="day"] .callscape .placeholder-title {
+    color: var(--theme-text-primary) !important;
+}
+
+[data-theme="day"] .callscape .placeholder-subtitle {
+    color: var(--theme-text-secondary) !important;
+}
+
+[data-theme="day"] .callscape .logo-ring {
+    border-color: var(--theme-primary) !important;
+}
+
+[data-theme="day"] .callscape .logo-particles .particle {
+    background: var(--theme-primary) !important;
+}
+
+/* 日间主题 - 对话控制台 */
+[data-theme="day"] .callscape .dialog-shell {
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.95) 0%, rgba(241, 245, 249, 0.9) 100%) !important;
+    border: 1px solid rgba(59, 130, 246, 0.3) !important;
+    box-shadow: 0 8px 32px rgba(59, 130, 246, 0.15), inset 0 0 0 1px rgba(59, 130, 246, 0.1) !important;
+}
+
+[data-theme="day"] .callscape .dialog-header {
+    background: linear-gradient(135deg, rgba(224, 242, 254, 0.8) 0%, rgba(219, 234, 254, 0.85) 100%) !important;
+    border-bottom-color: rgba(59, 130, 246, 0.3) !important;
+}
+
+[data-theme="day"] .callscape .brand-icon {
+    background: transparent !important;
+    box-shadow: none !important;
+}
+
+[data-theme="day"] .callscape .brand-icon i {
+    color: var(--theme-primary) !important;
+}
+
+[data-theme="day"] .callscape .header-texts h2 {
+    color: var(--theme-text-primary) !important;
+}
+
+[data-theme="day"] .callscape .brand-subtitle {
+    color: var(--theme-text-secondary) !important;
+    opacity: 0.7 !important;
+}
+
+[data-theme="day"] .callscape .header-texts p {
+    color: var(--theme-text-secondary);
+}
+
+[data-theme="day"] .callscape .mode-pill {
+    background: linear-gradient(135deg, rgba(59, 130, 246, 0.2) 0%, rgba(37, 99, 235, 0.25) 100%);
+    color: var(--theme-primary-dark);
+    border: 1px solid rgba(59, 130, 246, 0.4);
+}
+
+[data-theme="day"] .callscape .status-dot.connected {
+    background: #10b981;
+    box-shadow: 0 0 8px rgba(16, 185, 129, 0.6);
+}
+
+[data-theme="day"] .callscape .status-dot.connecting {
+    background: var(--theme-primary);
+    box-shadow: 0 0 8px rgba(59, 130, 246, 0.6);
+}
+
+[data-theme="day"] .callscape .connection-text {
+    color: var(--theme-text-primary);
+}
+
+/* 日间主题 - 模式工具栏 */
+[data-theme="day"] .callscape .mode-toolbar {
+    background: linear-gradient(135deg, rgba(207, 250, 254, 0.6) 0%, rgba(224, 242, 254, 0.7) 100%) !important;
+    border-bottom-color: rgba(6, 182, 212, 0.3) !important;
+}
+
+[data-theme="day"] .callscape .mode-switch {
+    background: rgba(255, 255, 255, 0.8) !important;
+    border-color: rgba(59, 130, 246, 0.3) !important;
+}
+
+[data-theme="day"] .callscape .mode-switch button {
+    color: var(--theme-text-secondary) !important;
+    background: rgba(241, 245, 249, 0.8) !important;
+}
+
+[data-theme="day"] .callscape .mode-switch button.active {
+    background: linear-gradient(135deg, var(--theme-primary) 0%, var(--theme-primary-dark) 100%) !important;
+    color: #ffffff !important;
+    box-shadow: 0 4px 12px rgba(59, 130, 246, 0.35) !important;
+}
+
+[data-theme="day"] .callscape .status-chip {
+    background: rgba(255, 255, 255, 0.9);
+    border-color: rgba(59, 130, 246, 0.3);
+}
+
+[data-theme="day"] .callscape .status-chip.chip-idle {
+    color: var(--theme-text-secondary);
+    background: rgba(241, 245, 249, 0.9);
+    border-color: rgba(148, 163, 184, 0.4);
+}
+
+[data-theme="day"] .callscape .status-chip.chip-recording {
+    color: #7e22ce;
+    background: rgba(168, 85, 247, 0.2);
+    border-color: rgba(168, 85, 247, 0.5);
+}
+
+[data-theme="day"] .callscape .status-chip.chip-processing {
+    color: #b45309;
+    background: rgba(245, 158, 11, 0.2);
+    border-color: rgba(245, 158, 11, 0.5);
+}
+
+[data-theme="day"] .callscape .status-chip.chip-success {
+    color: #047857;
+    background: rgba(16, 185, 129, 0.2);
+    border-color: rgba(16, 185, 129, 0.5);
+}
+
+[data-theme="day"] .callscape .status-chip.chip-warning {
+    color: #c2410c;
+    background: rgba(249, 115, 22, 0.2);
+    border-color: rgba(249, 115, 22, 0.5);
+}
+
+[data-theme="day"] .callscape .status-chip.chip-error {
+    color: #be123c;
+    background: rgba(244, 63, 94, 0.2);
+    border-color: rgba(244, 63, 94, 0.5);
+}
+
+[data-theme="day"] .callscape .btn-free-talk {
+    background: linear-gradient(135deg, var(--theme-primary) 0%, var(--theme-primary-dark) 100%) !important;
+    color: #ffffff !important;
+    box-shadow: 0 3px 10px rgba(59, 130, 246, 0.3) !important;
+}
+
+[data-theme="day"] .callscape .btn-free-talk:hover:not(:disabled) {
+    box-shadow: 0 6px 16px rgba(59, 130, 246, 0.5) !important;
+}
+
+[data-theme="day"] .callscape .btn-free-talk.running {
+    background: linear-gradient(135deg, #10b981 0%, #059669 100%) !important;
+    box-shadow: 0 4px 12px rgba(16, 185, 129, 0.4) !important;
+}
+
+/* 日间主题 - 输入区域 */
+[data-theme="day"] .callscape .chat-input-area {
+    background: linear-gradient(135deg, rgba(186, 230, 253, 0.6) 0%, rgba(224, 242, 254, 0.7) 100%) !important;
+    border-top-color: rgba(14, 165, 233, 0.3) !important;
+}
+
+[data-theme="day"] .callscape .input-wrapper {
+    background: rgba(255, 255, 255, 0.95) !important;
+    border-color: rgba(59, 130, 246, 0.3) !important;
+}
+
+[data-theme="day"] .callscape .input-wrapper:focus-within {
+    background: rgba(255, 255, 255, 1) !important;
+    border-color: var(--theme-primary) !important;
+    box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.2) !important;
+}
+
+[data-theme="day"] .callscape .btn-voice {
+    color: var(--theme-primary-dark) !important;
+    background: rgba(59, 130, 246, 0.15) !important;
+}
+
+[data-theme="day"] .callscape .btn-voice:hover {
+    background: rgba(59, 130, 246, 0.25) !important;
+}
+
+[data-theme="day"] .callscape .btn-voice.recording {
+    color: #dc2626 !important;
+    background: rgba(239, 68, 68, 0.25) !important;
+}
+
+[data-theme="day"] .callscape .free-talk-indicator {
+    color: var(--theme-text-muted) !important;
+    background: rgba(148, 163, 184, 0.15) !important;
+}
+
+[data-theme="day"] .callscape .free-talk-indicator.active {
+    color: var(--theme-primary-dark) !important;
+    background: rgba(59, 130, 246, 0.2) !important;
+    box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.3) inset !important;
+}
+
+[data-theme="day"] .callscape textarea {
+    color: var(--theme-text-primary) !important;
+}
+
+[data-theme="day"] .callscape textarea::placeholder {
+    color: var(--theme-text-muted) !important;
+}
+
+[data-theme="day"] .callscape .btn-send {
+    background: linear-gradient(135deg, var(--theme-primary) 0%, var(--theme-primary-dark) 100%) !important;
+    color: #ffffff !important;
+}
+
+[data-theme="day"] .callscape .btn-send:hover {
+    box-shadow: 0 4px 12px rgba(59, 130, 246, 0.4) !important;
+}
+
+/* 日间主题 - 快捷操作气泡 */
+[data-theme="day"] .callscape .quick-actions-trigger {
+    background: linear-gradient(135deg, rgba(59, 130, 246, 0.2), rgba(6, 182, 212, 0.15)) !important;
+    color: var(--theme-primary-dark) !important;
+    box-shadow: 0 4px 12px rgba(59, 130, 246, 0.2) !important;
+}
+
+[data-theme="day"] .callscape .quick-actions-trigger::before {
+    background: linear-gradient(135deg, rgba(59, 130, 246, 0.4), rgba(6, 182, 212, 0.3)) !important;
+}
+
+[data-theme="day"] .callscape .quick-actions-trigger:hover {
+    box-shadow: 0 8px 20px rgba(59, 130, 246, 0.4) !important;
+}
+
+[data-theme="day"] .callscape .quick-actions-trigger.active {
+    background: linear-gradient(135deg, var(--theme-primary), var(--theme-primary-dark)) !important;
+    color: #ffffff !important;
+    box-shadow: 0 8px 24px rgba(59, 130, 246, 0.5) !important;
+}
+
+[data-theme="day"] .callscape .quick-actions-bubble {
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.98), rgba(241, 245, 249, 0.95)) !important;
+    border-color: rgba(59, 130, 246, 0.4) !important;
+    box-shadow:
+        0 20px 40px rgba(59, 130, 246, 0.2),
+        0 0 0 1px rgba(59, 130, 246, 0.1) inset,
+        0 0 30px rgba(59, 130, 246, 0.15) !important;
+}
+
+[data-theme="day"] .callscape .quick-actions-bubble::before {
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.98), rgba(241, 245, 249, 0.95)) !important;
+    border-right-color: rgba(59, 130, 246, 0.4) !important;
+    border-bottom-color: rgba(59, 130, 246, 0.4) !important;
+}
+
+[data-theme="day"] .callscape .bubble-action {
+    background: rgba(241, 245, 249, 0.6) !important;
+    color: var(--theme-text-primary) !important;
+}
+
+[data-theme="day"] .callscape .bubble-action::before {
+    background: linear-gradient(135deg, rgba(59, 130, 246, 0.3), rgba(6, 182, 212, 0.2)) !important;
+}
+
+[data-theme="day"] .callscape .bubble-action:hover:not(:disabled) {
+    background: rgba(59, 130, 246, 0.2) !important;
+    box-shadow: 0 4px 12px rgba(59, 130, 246, 0.3) !important;
+}
+
+[data-theme="day"] .callscape .bubble-action i {
+    color: var(--theme-primary) !important;
+}
+
+[data-theme="day"] .callscape .bubble-action:hover:not(:disabled) i {
+    color: var(--theme-primary-dark) !important;
+}
+
+/* 日间主题 - 按钮 */
+[data-theme="day"] .callscape .btn-call {
+    background: linear-gradient(135deg, var(--theme-primary) 0%, var(--theme-primary-dark) 100%) !important;
+    color: #ffffff !important;
+    box-shadow: 0 8px 24px rgba(59, 130, 246, 0.4) !important;
+}
+
+[data-theme="day"] .callscape .btn-call:hover {
+    box-shadow: 0 12px 32px rgba(59, 130, 246, 0.5) !important;
+}
+
+[data-theme="day"] .callscape .btn-end {
+    background: linear-gradient(135deg, #ef4444 0%, #dc2626 100%) !important;
+    color: #ffffff !important;
+    box-shadow: 0 8px 24px rgba(239, 68, 68, 0.4) !important;
+}
+
+[data-theme="day"] .callscape .btn-end:hover {
+    box-shadow: 0 12px 32px rgba(239, 68, 68, 0.5) !important;
+}
+
+/* 日间主题 - 聊天消息列表 */
+[data-theme="day"] .chat-messages {
+    background: linear-gradient(180deg, rgba(241, 245, 249, 0.8) 0%, rgba(226, 232, 240, 0.6) 100%);
+}
+
+[data-theme="day"] .chat-messages::-webkit-scrollbar-track {
+    background: rgba(226, 232, 240, 0.5);
+}
+
+[data-theme="day"] .chat-messages::-webkit-scrollbar-thumb {
+    background-color: rgba(59, 130, 246, 0.4);
+}
+
+[data-theme="day"] .chat-messages::-webkit-scrollbar-thumb:hover {
+    background-color: rgba(59, 130, 246, 0.6);
+}
+
+[data-theme="day"] .message-system {
+    color: var(--theme-primary-dark);
+    background: rgba(59, 130, 246, 0.15);
+    border: 1px solid rgba(59, 130, 246, 0.3);
+}
+
+[data-theme="day"] .avatar-user {
+    background: linear-gradient(140deg, var(--theme-primary) 0%, var(--theme-primary-dark) 100%);
+}
+
+[data-theme="day"] .avatar-ai {
+    background: linear-gradient(140deg, #0ea5e9 0%, #0284c7 100%);
+}
+
+[data-theme="day"] .message-user .bubble {
+    color: #ffffff;
+    background: linear-gradient(140deg, var(--theme-primary) 0%, var(--theme-primary-dark) 100%);
+    box-shadow: 0 6px 16px rgba(59, 130, 246, 0.3);
+}
+
+[data-theme="day"] .message-ai .bubble {
+    color: var(--theme-text-primary);
+    background: rgba(255, 255, 255, 0.95);
+    border-color: rgba(59, 130, 246, 0.25);
+    box-shadow: 0 4px 12px rgba(59, 130, 246, 0.15);
+}
+
+[data-theme="day"] .thinking-text {
+    color: var(--theme-primary-dark);
+}
+
+[data-theme="day"] .thinking-dots i {
+    background: var(--theme-primary);
+}
+
+[data-theme="day"] .typing-cursor {
+    background: var(--theme-primary);
+}
+
+/* 日间主题 - LocalCaptureCard 组件 */
+[data-theme="day"] .local-capture-card {
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.95) 0%, rgba(241, 245, 249, 0.9) 100%);
+    border: 1px solid rgba(59, 130, 246, 0.3);
+    box-shadow: 0 8px 24px rgba(59, 130, 246, 0.15);
+}
+
+[data-theme="day"] .local-capture-card .card-header {
+    background: linear-gradient(135deg, rgba(224, 242, 254, 0.8) 0%, rgba(219, 234, 254, 0.85) 100%);
+    border-bottom-color: rgba(59, 130, 246, 0.3);
+}
+
+[data-theme="day"] .local-capture-card .card-title {
+    color: var(--theme-text-primary);
+}
+
+[data-theme="day"] .local-capture-card .card-title i {
+    color: var(--theme-primary);
+}
+
+[data-theme="day"] .local-capture-card .btn-toggle-camera {
+    background: linear-gradient(135deg, var(--theme-primary) 0%, var(--theme-primary-dark) 100%);
+    color: #ffffff;
+    box-shadow: 0 4px 12px rgba(59, 130, 246, 0.3);
+}
+
+[data-theme="day"] .local-capture-card .btn-toggle-camera:hover {
+    box-shadow: 0 6px 16px rgba(59, 130, 246, 0.4);
+}
+
+[data-theme="day"] .local-capture-card .camera-preview {
+    background: linear-gradient(135deg, rgba(224, 242, 254, 0.6) 0%, rgba(219, 234, 254, 0.8) 100%);
+    border: 1px solid rgba(59, 130, 246, 0.3);
+}
+
+[data-theme="day"] .local-capture-card .vision-text {
+    color: var(--theme-text-secondary);
+    background: rgba(255, 255, 255, 0.9);
+    border: 1px solid rgba(59, 130, 246, 0.25);
+}
+
+/* 日间主题 - 摄像头卡片（完整样式） */
+[data-theme="day"] .camera-toggle-simple {
+    background: linear-gradient(135deg, var(--theme-primary) 0%, var(--theme-primary-dark) 100%) !important;
+    color: #ffffff !important;
+    box-shadow: 0 3px 10px rgba(59, 130, 246, 0.4) !important;
+}
+
+[data-theme="day"] .camera-toggle-simple:hover:not(:disabled) {
+    box-shadow: 0 6px 16px rgba(59, 130, 246, 0.6) !important;
+}
+
+[data-theme="day"] .local-camera-card {
+    background: rgba(255, 255, 255, 0.95) !important;
+    backdrop-filter: blur(30px) !important;
+    -webkit-backdrop-filter: blur(30px) !important;
+    border: 1px solid rgba(59, 130, 246, 0.3) !important;
+    box-shadow:
+        0 20px 40px -10px rgba(59, 130, 246, 0.2),
+        0 0 20px rgba(59, 130, 246, 0.15) !important;
+    color: var(--theme-text-primary) !important;
+}
+
+[data-theme="day"] .local-camera-card:not(.dragging):not(.resizing):hover {
+    box-shadow:
+        0 25px 50px -12px rgba(59, 130, 246, 0.25),
+        0 0 30px rgba(59, 130, 246, 0.25) !important;
+    border-color: rgba(59, 130, 246, 0.5) !important;
+}
+
+[data-theme="day"] .local-camera-card.dragging,
+[data-theme="day"] .local-camera-card.resizing {
+    border: 3px solid var(--theme-primary) !important;
+}
+
+[data-theme="day"] .local-camera-top {
+    background: linear-gradient(180deg, rgba(224, 242, 254, 0.8), rgba(241, 245, 249, 0.6)) !important;
+    border-bottom: 1px solid rgba(59, 130, 246, 0.2) !important;
+}
+
+[data-theme="day"] .camera-title {
+    color: var(--theme-primary-dark) !important;
+}
+
+[data-theme="day"] .btn-collapse {
+    border: 1px solid rgba(59, 130, 246, 0.3) !important;
+    color: var(--theme-primary) !important;
+    background: rgba(59, 130, 246, 0.1) !important;
+}
+
+[data-theme="day"] .btn-collapse:hover {
+    border-color: rgba(59, 130, 246, 0.6) !important;
+    background: rgba(59, 130, 246, 0.2) !important;
+}
+
+[data-theme="day"] .btn-camera-toggle {
+    background: linear-gradient(135deg, var(--theme-primary) 0%, var(--theme-primary-dark) 100%) !important;
+    color: #ffffff !important;
+    box-shadow: 0 4px 12px rgba(59, 130, 246, 0.4) !important;
+}
+
+[data-theme="day"] .btn-camera-toggle:hover {
+    box-shadow: 0 6px 16px rgba(59, 130, 246, 0.6) !important;
+}
+
+[data-theme="day"] .local-camera-preview {
+    background: #f8fafc !important;
+}
+
+[data-theme="day"] .resize-handle {
+    color: rgba(59, 130, 246, 0.5) !important;
+    background: linear-gradient(135deg, transparent 50%, rgba(59, 130, 246, 0.12) 50%) !important;
+}
+
+[data-theme="day"] .resize-handle:hover {
+    color: rgba(59, 130, 246, 1) !important;
+    background: linear-gradient(135deg, transparent 50%, rgba(59, 130, 246, 0.25) 50%) !important;
+}
+
+/* 日间主题 - 页面整体背景 */
+[data-theme="day"] .callscape {
+    background: linear-gradient(135deg, #f0f4f8 0%, #e2e8f0 100%) !important;
+}
+
+/* 日间主题 - 媒体舞台整体（覆盖所有深色背景） */
+[data-theme="day"] .callscape .media-stage {
+    background: linear-gradient(135deg, rgba(224, 242, 254, 0.95) 0%, rgba(219, 234, 254, 0.9) 100%) !important;
+    box-shadow: 0 8px 32px rgba(59, 130, 246, 0.15), inset 0 0 0 1px rgba(59, 130, 246, 0.1) !important;
+}
+
+/* 日间主题 - 视频背景模糊层（隐藏或改为浅色） */
+[data-theme="day"] .callscape .video-blur-bg {
+    opacity: 0 !important;
+}
+
+/* 日间主题 - 舞台光晕效果 */
+[data-theme="day"] .callscape .stage-aura {
+    background: radial-gradient(circle at 20% 30%, rgba(59, 130, 246, 0.15), transparent 45%),
+        radial-gradient(circle at 82% 68%, rgba(6, 182, 212, 0.1), transparent 45%) !important;
+}
+
+/* 日间主题 - 对话控制台整体 */
+[data-theme="day"] .callscape .dialog-shell {
+    background: linear-gradient(160deg, rgba(255, 255, 255, 0.98) 0%, rgba(241, 245, 249, 0.95) 100%);
+    box-shadow: 0 8px 32px rgba(59, 130, 246, 0.15), inset 0 0 0 1px rgba(59, 130, 246, 0.1);
+}
+
+/* 日间主题 - 浮动控制按钮容器 */
+[data-theme="day"] .callscape .floating-controls {
+    background: rgba(255, 255, 255, 0.95) !important;
+    border: 1px solid rgba(59, 130, 246, 0.3) !important;
+    box-shadow: 0 8px 24px rgba(59, 130, 246, 0.2) !important;
+    backdrop-filter: blur(18px) !important;
+    -webkit-backdrop-filter: blur(18px) !important;
+}
+
+/* 日间主题 - 头部品牌区域 */
+[data-theme="day"] .callscape .header-brand {
+    color: var(--theme-text-primary);
+}
+
+[data-theme="day"] .callscape .brand-subtitle {
+    color: var(--theme-text-secondary) !important;
+    opacity: 0.7 !important;
+}
+
+/* 日间主题 - 模式切换按钮 */
+[data-theme="day"] .callscape .mode-switch button {
+    background: rgba(241, 245, 249, 0.8);
+    color: var(--theme-text-secondary);
+}
+
+[data-theme="day"] .callscape .mode-switch button.active {
+    background: linear-gradient(140deg, var(--theme-primary) 0%, var(--theme-primary-dark) 100%);
+    color: #ffffff;
+    box-shadow: 0 4px 12px rgba(59, 130, 246, 0.35);
+}
+
+/* 日间主题 - 错误/警告通知框 */
+[data-theme="day"] .message-toast {
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.98) 0%, rgba(241, 245, 249, 0.95) 100%) !important;
+    border: 2px solid rgba(59, 130, 246, 0.5) !important;
+    box-shadow: 0 8px 24px rgba(59, 130, 246, 0.25) !important;
+    color: var(--theme-text-primary) !important;
+}
+
+[data-theme="day"] .message-error {
+    background: linear-gradient(135deg, rgba(239, 246, 255, 0.98) 0%, rgba(219, 234, 254, 0.95) 100%) !important;
+    border: 2px solid rgba(59, 130, 246, 0.6) !important;
+    box-shadow: 0 8px 24px rgba(59, 130, 246, 0.3) !important;
+    color: var(--theme-primary-dark) !important;
+}
+
+[data-theme="day"] .message-success {
+    background: linear-gradient(135deg, rgba(240, 253, 244, 0.98) 0%, rgba(220, 252, 231, 0.95) 100%) !important;
+    border: 2px solid rgba(34, 197, 94, 0.6) !important;
+    box-shadow: 0 8px 24px rgba(34, 197, 94, 0.25) !important;
+    color: #047857 !important;
+}
+
+[data-theme="day"] .message-warning {
+    background: linear-gradient(135deg, rgba(254, 252, 232, 0.98) 0%, rgba(254, 249, 195, 0.95) 100%) !important;
+    border: 2px solid rgba(234, 179, 8, 0.6) !important;
+    box-shadow: 0 8px 24px rgba(234, 179, 8, 0.25) !important;
+    color: #a16207 !important;
+}
+
+[data-theme="day"] .message-content {
+    color: inherit !important;
+}
+
+[data-theme="day"] .message-content i {
+    color: inherit !important;
+}
+
+[data-theme="day"] .message-close {
+    color: var(--theme-text-secondary) !important;
+    background: rgba(148, 163, 184, 0.15) !important;
+}
+
+[data-theme="day"] .message-close:hover {
+    background: rgba(148, 163, 184, 0.25) !important;
+    color: var(--theme-text-primary) !important;
+}
+
+/* 日间主题 - 通用错误/警告提示框（覆盖所有可能的通知组件） */
+[data-theme="day"] .alert,
+[data-theme="day"] .notification,
+[data-theme="day"] .toast,
+[data-theme="day"] [class*="alert"],
+[data-theme="day"] [class*="notification"],
+[data-theme="day"] [class*="toast"] {
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.98) 0%, rgba(241, 245, 249, 0.95) 100%) !important;
+    border: 2px solid rgba(59, 130, 246, 0.5) !important;
+    box-shadow: 0 8px 24px rgba(59, 130, 246, 0.25) !important;
+    color: var(--theme-text-primary) !important;
+}
+
+[data-theme="day"] .alert-error,
+[data-theme="day"] .alert-danger,
+[data-theme="day"] .notification-error,
+[data-theme="day"] .toast-error,
+[data-theme="day"] [class*="error"],
+[data-theme="day"] [class*="danger"] {
+    background: linear-gradient(135deg, rgba(239, 246, 255, 0.98) 0%, rgba(219, 234, 254, 0.95) 100%) !important;
+    border: 2px solid rgba(59, 130, 246, 0.6) !important;
+    box-shadow: 0 8px 24px rgba(59, 130, 246, 0.3) !important;
+    color: var(--theme-primary-dark) !important;
+}
+
+/* =====================================================================
+   日间 · 温柔疗愈：暖调覆盖（仅覆盖当前存活的选择器）
+   说明：本页 useTheme 的全局 --theme-primary 在日间为冷蓝，且不能改动
+   （其它页面共用），故此处一律用显式暖调色值，不引用 var(--theme-primary)。
+   与多模态/形象页共用同一套语义色，保证三页日间视觉一致。
+   本块位于文件末尾，源序靠后；凡原规则用了 !important，此处同样加 !important 以胜出。
+   夜间（无 data-theme=day）完全不受影响。
+   ===================================================================== */
+
+/* 聊天消息列表 */
+[data-theme="day"] .chat-messages {
+    background: linear-gradient(180deg, rgba(251, 238, 241, 0.7) 0%, rgba(243, 238, 251, 0.55) 100%);
+}
+
+[data-theme="day"] .chat-messages::-webkit-scrollbar-track {
+    background: rgba(243, 235, 240, 0.6);
+}
+
+[data-theme="day"] .chat-messages::-webkit-scrollbar-thumb {
+    background-color: rgba(224, 122, 151, 0.4);
+}
+
+[data-theme="day"] .chat-messages::-webkit-scrollbar-thumb:hover {
+    background-color: rgba(224, 122, 151, 0.6);
+}
+
+[data-theme="day"] .message-system {
+    color: #c25a77;
+    background: rgba(224, 122, 151, 0.14);
+    border: 1px solid rgba(224, 122, 151, 0.3);
+}
+
+/* 用户=玫瑰，AI=薰衣草，柔和分色 */
+[data-theme="day"] .avatar-user {
+    background: linear-gradient(140deg, #e07a97 0%, #c25a77 100%);
+}
+
+[data-theme="day"] .avatar-ai {
+    background: linear-gradient(140deg, #a99bd4 0%, #8b7bc4 100%);
+}
+
+[data-theme="day"] .message-user .bubble {
+    color: #ffffff;
+    background: linear-gradient(140deg, #e07a97 0%, #c25a77 100%);
+    box-shadow: 0 6px 16px rgba(224, 122, 151, 0.28);
+}
+
+[data-theme="day"] .message-ai .bubble {
+    color: #4a3d43;
+    background: rgba(255, 252, 250, 0.95);
+    border-color: rgba(224, 122, 151, 0.25);
+    box-shadow: 0 4px 12px rgba(224, 122, 151, 0.14);
+}
+
+[data-theme="day"] .thinking-text {
+    color: #c25a77;
+}
+
+[data-theme="day"] .thinking-dots i {
+    background: #e07a97;
+}
+
+[data-theme="day"] .typing-cursor {
+    background: #e07a97;
+}
+
+/* 摄像头卡片（存活选择器 .local-camera-*，原规则多用 !important） */
+[data-theme="day"] .camera-toggle-simple {
+    background: linear-gradient(135deg, #e07a97 0%, #c25a77 100%) !important;
+    color: #ffffff !important;
+    box-shadow: 0 3px 10px rgba(224, 122, 151, 0.4) !important;
+}
+
+[data-theme="day"] .camera-toggle-simple:hover:not(:disabled) {
+    box-shadow: 0 6px 16px rgba(224, 122, 151, 0.6) !important;
+}
+
+[data-theme="day"] .local-camera-card {
+    background: rgba(255, 252, 250, 0.95) !important;
+    border: 1px solid rgba(224, 122, 151, 0.3) !important;
+    box-shadow:
+        0 20px 40px -10px rgba(224, 122, 151, 0.2),
+        0 0 20px rgba(224, 122, 151, 0.14) !important;
+    color: #4a3d43 !important;
+}
+
+[data-theme="day"] .local-camera-card:not(.dragging):not(.resizing):hover {
+    box-shadow:
+        0 25px 50px -12px rgba(224, 122, 151, 0.25),
+        0 0 30px rgba(224, 122, 151, 0.22) !important;
+    border-color: rgba(224, 122, 151, 0.5) !important;
+}
+
+[data-theme="day"] .local-camera-card.dragging,
+[data-theme="day"] .local-camera-card.resizing {
+    border: 3px solid #e07a97 !important;
+}
+
+[data-theme="day"] .local-camera-top {
+    background: linear-gradient(180deg, rgba(251, 238, 241, 0.8), rgba(243, 238, 251, 0.6)) !important;
+    border-bottom: 1px solid rgba(224, 122, 151, 0.2) !important;
+}
+
+[data-theme="day"] .camera-title {
+    color: #c25a77 !important;
+}
+
+[data-theme="day"] .btn-collapse {
+    border: 1px solid rgba(224, 122, 151, 0.3) !important;
+    color: #e07a97 !important;
+    background: rgba(224, 122, 151, 0.1) !important;
+}
+
+[data-theme="day"] .btn-collapse:hover {
+    border-color: rgba(224, 122, 151, 0.6) !important;
+    background: rgba(224, 122, 151, 0.2) !important;
+}
+
+[data-theme="day"] .btn-camera-toggle {
+    background: linear-gradient(135deg, #e07a97 0%, #c25a77 100%) !important;
+    color: #ffffff !important;
+    box-shadow: 0 4px 12px rgba(224, 122, 151, 0.4) !important;
+}
+
+[data-theme="day"] .btn-camera-toggle:hover {
+    box-shadow: 0 6px 16px rgba(224, 122, 151, 0.6) !important;
+}
+
+[data-theme="day"] .local-camera-preview {
+    background: #fdf7f3 !important;
+}
+
+[data-theme="day"] .resize-handle {
+    color: rgba(224, 122, 151, 0.5) !important;
+    background: linear-gradient(135deg, transparent 50%, rgba(224, 122, 151, 0.12) 50%) !important;
+}
+
+[data-theme="day"] .resize-handle:hover {
+    color: rgba(224, 122, 151, 1) !important;
+    background: linear-gradient(135deg, transparent 50%, rgba(224, 122, 151, 0.25) 50%) !important;
+}
+
+/* 通知提示：中性态改暖调（error=蓝→保留语义暖化，success=绿 / warning=琥珀 语义保留） */
+[data-theme="day"] .message-toast {
+    background: linear-gradient(135deg, rgba(255, 252, 250, 0.98) 0%, rgba(251, 238, 241, 0.95) 100%) !important;
+    border: 2px solid rgba(224, 122, 151, 0.5) !important;
+    box-shadow: 0 8px 24px rgba(224, 122, 151, 0.25) !important;
+    color: #4a3d43 !important;
+}
+
+[data-theme="day"] .message-error {
+    background: linear-gradient(135deg, rgba(253, 242, 245, 0.98) 0%, rgba(251, 232, 237, 0.95) 100%) !important;
+    border: 2px solid rgba(224, 122, 151, 0.6) !important;
+    box-shadow: 0 8px 24px rgba(224, 122, 151, 0.3) !important;
+    color: #c25a77 !important;
+}
+
+[data-theme="day"] .message-close {
+    color: #6f5f66 !important;
+    background: rgba(156, 139, 146, 0.15) !important;
+}
+
+[data-theme="day"] .message-close:hover {
+    background: rgba(156, 139, 146, 0.25) !important;
+    color: #4a3d43 !important;
+}

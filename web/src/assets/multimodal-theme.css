@@ -1,0 +1,591 @@
+/* 多模态分析页面主题样式覆盖 */
+
+/* =====================================================================
+   日间 · 温柔疗愈配色（仅本页作用域生效）
+   仅在 [data-theme="day"] .multimodal-analysis 下覆盖 CSS 变量，
+   不修改 useTheme.js 全局变量，夜间主题与其它页面零影响。
+   ===================================================================== */
+[data-theme="day"] .multimodal-analysis {
+  /* 主色：柔玫瑰珊瑚（primary-dark 加深以保证按钮白字可读性） */
+  --theme-primary: #e07a97;
+  --theme-primary-light: #f2a7bb;
+  --theme-primary-dark: #c25a77;
+
+  /* 背景：暖白毛玻璃 */
+  --theme-bg-card: rgba(255, 252, 250, 0.9);
+  --theme-bg-input: rgba(253, 246, 243, 0.92);
+
+  /* 文字：暖调深灰，保证浅底可读 */
+  --theme-text-primary: #4a3d43;
+  --theme-text-secondary: #6f5f66;
+  --theme-text-muted: #9c8b92;
+
+  /* 边框 / 阴影：暖粉扩散 */
+  --theme-border: rgba(224, 122, 151, 0.24);
+  --theme-shadow: 0 8px 24px rgba(224, 122, 151, 0.16);
+  --theme-shadow-hover: 0 14px 34px rgba(224, 122, 151, 0.26);
+
+  /* 渐变层：玫瑰 / 薰衣草 / 鼠尾草 */
+  --theme-gradient-1: rgba(232, 130, 154, 0.14);
+  --theme-gradient-2: rgba(169, 155, 212, 0.16);
+  --theme-gradient-3: rgba(124, 174, 155, 0.12);
+  --theme-gradient-4: rgba(242, 167, 187, 0.16);
+
+  /* 疗愈语义色：供数据可视化替换硬编码青蓝 */
+  --heal-rose: #e07a97;
+  --heal-rose-soft: #f2a7bb;
+  --heal-sage: #7cae9b;
+  --heal-sage-strong: #5f9a85;
+  --heal-amber: #e0a04a;
+  --heal-lavender: #a99bd4;
+  --heal-lavender-strong: #8b7bc4;
+}
+
+/* 页面暖调背景（双类名提高特异性，压过 scoped 的 background: transparent） */
+[data-theme="day"] .multimodal-analysis.multimodal-analysis {
+  background:
+    radial-gradient(circle at 12% 6%, rgba(242, 167, 187, 0.2), transparent 42%),
+    radial-gradient(circle at 88% 94%, rgba(169, 155, 212, 0.16), transparent 46%),
+    linear-gradient(135deg, #fdf7f3 0%, #fbeef1 48%, #f3eefb 100%);
+}
+
+.multimodal-analysis .card-title {
+    color: var(--theme-text-primary);
+    transition: color 0.3s ease;
+}
+
+.multimodal-analysis .card-title i {
+    color: var(--theme-primary);
+    transition: color 0.3s ease;
+}
+
+.multimodal-analysis .video-preview {
+    background:
+        radial-gradient(circle at 30% 24%, var(--theme-gradient-2), transparent 42%),
+        linear-gradient(180deg, var(--theme-bg-card), var(--theme-bg-input));
+    transition: background 0.3s ease;
+}
+
+.multimodal-analysis .preview-placeholder {
+    color: var(--theme-primary);
+    transition: color 0.3s ease;
+}
+
+.multimodal-analysis .preview-placeholder p {
+    color: var(--theme-text-muted);
+    transition: color 0.3s ease;
+}
+
+.multimodal-analysis .audio-visualizer {
+    background: var(--theme-bg-input);
+    transition: background 0.3s ease;
+}
+
+.multimodal-analysis .wave-bar {
+    background: var(--theme-primary);
+    transition: background 0.3s ease;
+}
+
+.multimodal-analysis .wave-bar.active {
+    background: var(--theme-primary);
+    opacity: 1;
+}
+
+/* 日间主题下的波浪条增强 */
+[data-theme="day"] .multimodal-analysis .wave-bar {
+    background: linear-gradient(180deg, var(--theme-primary-light) 0%, var(--theme-primary) 100%);
+    box-shadow: 0 2px 8px var(--theme-gradient-1);
+}
+
+[data-theme="day"] .multimodal-analysis .wave-bar.active {
+    background: linear-gradient(180deg, var(--theme-primary) 0%, var(--theme-primary-dark) 100%);
+    box-shadow: 0 4px 12px var(--theme-gradient-2);
+}
+
+.multimodal-analysis .text-area {
+    background: var(--theme-bg-input);
+    border-color: var(--theme-border);
+    color: var(--theme-text-primary);
+    transition: background 0.3s ease, border-color 0.3s ease, color 0.3s ease;
+}
+
+.multimodal-analysis .text-area:focus {
+    border-color: var(--theme-primary);
+    box-shadow: 0 0 0 3px var(--theme-gradient-1);
+}
+
+.multimodal-analysis .btn-toggle {
+    background: var(--theme-bg-input);
+    border-color: var(--theme-border);
+    color: var(--theme-text-primary);
+    transition: all 0.3s ease;
+}
+
+.multimodal-analysis .btn-toggle:hover {
+    background: var(--theme-gradient-1);
+    border-color: var(--theme-primary);
+}
+
+.multimodal-analysis .btn-toggle.active {
+    background: linear-gradient(135deg, var(--theme-primary) 0%, var(--theme-primary-light) 100%);
+    box-shadow: 0 4px 12px var(--theme-gradient-2);
+}
+
+.multimodal-analysis .btn-upload {
+    background: var(--theme-gradient-2);
+    border-color: var(--theme-primary-dark);
+    color: var(--theme-primary-dark);
+    transition: all 0.3s ease;
+}
+
+.multimodal-analysis .btn-upload:hover:not(:disabled) {
+    background: var(--theme-gradient-3);
+    border-color: var(--theme-primary);
+}
+
+.multimodal-analysis .btn-analyze {
+    background: linear-gradient(135deg, var(--theme-primary) 0%, var(--theme-primary-light) 100%);
+    box-shadow: var(--theme-shadow);
+    transition: all 0.3s ease;
+}
+
+.multimodal-analysis .btn-analyze:hover:not(:disabled) {
+    box-shadow: var(--theme-shadow-hover);
+}
+
+.multimodal-analysis .result-card {
+    background: var(--theme-bg-card);
+    border-color: var(--theme-border);
+    transition: background 0.3s ease, border-color 0.3s ease;
+}
+
+.multimodal-analysis .result-card::-webkit-scrollbar-thumb {
+    background: var(--theme-primary);
+    transition: background 0.3s ease;
+}
+
+.multimodal-analysis .empty-state,
+.multimodal-analysis .analyzing-state {
+    color: var(--theme-text-muted);
+    transition: color 0.3s ease;
+}
+
+.multimodal-analysis .empty-state i {
+    color: var(--theme-primary);
+    transition: color 0.3s ease;
+}
+
+.multimodal-analysis .spinner {
+    border-color: var(--theme-gradient-1);
+    border-top-color: var(--theme-primary);
+    transition: border-color 0.3s ease;
+}
+
+.multimodal-analysis .progress-bar {
+    background: var(--theme-gradient-1);
+    transition: background 0.3s ease;
+}
+
+.multimodal-analysis .progress-fill {
+    background: linear-gradient(90deg, var(--theme-primary) 0%, var(--theme-primary-light) 100%);
+    transition: background 0.3s ease;
+}
+
+.multimodal-analysis .progress-text {
+    color: var(--theme-primary);
+    transition: color 0.3s ease;
+}
+
+.multimodal-analysis .result-block {
+    background: var(--theme-bg-input);
+    border-color: var(--theme-border);
+    transition: background 0.3s ease, border-color 0.3s ease;
+}
+
+.multimodal-analysis .block-title {
+    color: var(--theme-text-primary);
+    transition: color 0.3s ease;
+}
+
+.multimodal-analysis .block-title i {
+    color: var(--theme-primary);
+    transition: color 0.3s ease;
+}
+
+.multimodal-analysis .emotion-item {
+    background: var(--theme-bg-card);
+    transition: background 0.3s ease;
+}
+
+.multimodal-analysis .emotion-label {
+    color: var(--theme-text-muted);
+    transition: color 0.3s ease;
+}
+
+.multimodal-analysis .emotion-value {
+    color: var(--theme-text-primary);
+    transition: color 0.3s ease;
+}
+
+.multimodal-analysis .status-description {
+    color: var(--theme-text-secondary);
+    transition: color 0.3s ease;
+}
+
+.multimodal-analysis .suggestions-list {
+    color: var(--theme-text-secondary);
+    transition: color 0.3s ease;
+}
+
+.multimodal-analysis .text-content-display {
+    background: var(--theme-bg-card);
+    color: var(--theme-text-primary);
+    transition: background 0.3s ease, color 0.3s ease;
+}
+
+.multimodal-analysis .btn-use-in-avatar {
+    background: linear-gradient(135deg, var(--theme-primary-dark) 0%, var(--theme-primary) 100%);
+    box-shadow: var(--theme-shadow);
+    transition: all 0.3s ease;
+}
+
+.multimodal-analysis .btn-use-in-avatar:hover {
+    box-shadow: var(--theme-shadow-hover);
+}
+
+.multimodal-analysis .keyframe-image {
+    background: var(--theme-bg-input);
+    transition: background 0.3s ease;
+}
+
+.multimodal-analysis .keyframe-emotion {
+    color: var(--theme-text-secondary);
+    transition: color 0.3s ease;
+}
+
+.multimodal-analysis .result-meta {
+    border-top-color: var(--theme-border);
+    color: var(--theme-text-muted);
+    transition: border-color 0.3s ease, color 0.3s ease;
+}
+
+.multimodal-analysis .emotion-note {
+    background: var(--theme-gradient-1);
+    border-color: var(--theme-border);
+    color: var(--theme-primary-light);
+    transition: background 0.3s ease, border-color 0.3s ease, color 0.3s ease;
+}
+
+/* =====================================================================
+   日间 · 温柔疗愈：卡片与结果块暖调质感（替换原冷蓝硬编码）
+   ===================================================================== */
+[data-theme="day"] .multimodal-analysis .capture-card {
+    box-shadow: 0 6px 20px rgba(224, 122, 151, 0.12);
+}
+
+[data-theme="day"] .multimodal-analysis .video-preview {
+    background:
+        radial-gradient(circle at 30% 24%, rgba(242, 167, 187, 0.28), transparent 44%),
+        linear-gradient(180deg, rgba(253, 246, 243, 0.9), rgba(251, 238, 241, 0.96));
+}
+
+[data-theme="day"] .multimodal-analysis .audio-visualizer {
+    background: linear-gradient(135deg, rgba(251, 238, 241, 0.7) 0%, rgba(243, 238, 251, 0.85) 100%);
+    border: 1px solid rgba(224, 122, 151, 0.18);
+}
+
+[data-theme="day"] .multimodal-analysis .result-card {
+    box-shadow: 0 10px 30px rgba(224, 122, 151, 0.14);
+}
+
+/* 视频卡=玫瑰调，音频卡=薰衣草调，形成柔和分色 */
+[data-theme="day"] .multimodal-analysis .video-card {
+    background: linear-gradient(135deg, rgba(255, 252, 250, 0.94) 0%, rgba(251, 238, 241, 0.9) 100%);
+    border: 1px solid rgba(224, 122, 151, 0.28);
+}
+
+[data-theme="day"] .multimodal-analysis .audio-card {
+    background: linear-gradient(135deg, rgba(255, 252, 250, 0.94) 0%, rgba(243, 238, 251, 0.9) 100%);
+    border: 1px solid rgba(169, 155, 212, 0.28);
+}
+
+/* =====================================================================
+   日间 · 温柔疗愈：清理结果区硬编码青蓝 → 暖调语义色
+   选择器 (0,3,x) 特异性高于 scoped (0,2,x)，稳定覆盖
+   ===================================================================== */
+/* 三模态证据卡 */
+[data-theme="day"] .multimodal-analysis .modality-card {
+    border-color: rgba(224, 122, 151, 0.2);
+    background:
+        linear-gradient(145deg, rgba(232, 130, 154, 0.08), rgba(169, 155, 212, 0.06)),
+        var(--theme-bg-card);
+}
+
+[data-theme="day"] .multimodal-analysis .modality-icon {
+    background: rgba(232, 130, 154, 0.14);
+    color: var(--heal-rose);
+}
+
+[data-theme="day"] .multimodal-analysis .modality-state {
+    color: var(--heal-sage-strong);
+}
+
+[data-theme="day"] .multimodal-analysis .snapshot-badge {
+    border-color: rgba(124, 174, 155, 0.3);
+    background: rgba(124, 174, 155, 0.12);
+    color: var(--heal-sage-strong);
+}
+
+/* 置信度 / 融合进度条 → 玫瑰渐变 */
+[data-theme="day"] .multimodal-analysis .confidence-track span,
+[data-theme="day"] .multimodal-analysis .fusion-track span {
+    background: linear-gradient(90deg, var(--heal-rose), var(--heal-rose-soft));
+}
+
+[data-theme="day"] .multimodal-analysis .modality-foot strong,
+[data-theme="day"] .multimodal-analysis .signal-evidence-strip i {
+    color: var(--heal-rose);
+}
+
+/* 七维融合块 */
+[data-theme="day"] .multimodal-analysis .fusion-block {
+    background:
+        radial-gradient(circle at 88% 4%, rgba(169, 155, 212, 0.12), transparent 33%),
+        var(--theme-bg-input);
+}
+
+[data-theme="day"] .multimodal-analysis .dominant-emotion-chip {
+    border-color: rgba(224, 122, 151, 0.22);
+    background: rgba(232, 130, 154, 0.09);
+}
+
+[data-theme="day"] .multimodal-analysis .dominant-emotion-chip b,
+[data-theme="day"] .multimodal-analysis .fusion-row.dominant .fusion-label,
+[data-theme="day"] .multimodal-analysis .fusion-row.dominant strong {
+    color: var(--heal-rose);
+}
+
+[data-theme="day"] .multimodal-analysis .fusion-row.dominant .fusion-track span {
+    background: linear-gradient(90deg, var(--heal-rose), var(--heal-rose-soft));
+    box-shadow: 0 0 14px rgba(224, 122, 151, 0.3);
+}
+
+/* 语义理解 / 风险路由 */
+[data-theme="day"] .multimodal-analysis .context-score {
+    background: rgba(232, 130, 154, 0.08);
+}
+
+[data-theme="day"] .multimodal-analysis .context-score b {
+    color: var(--heal-rose);
+}
+
+/* 知识桥接块 */
+[data-theme="day"] .multimodal-analysis .knowledge-bridge-block {
+    background:
+        linear-gradient(135deg, rgba(232, 130, 154, 0.1), rgba(124, 174, 155, 0.08)),
+        var(--theme-bg-input);
+    border-color: rgba(224, 122, 151, 0.22);
+}
+
+[data-theme="day"] .multimodal-analysis .knowledge-bridge-panel {
+    background: rgba(255, 252, 250, 0.66);
+    border-color: rgba(224, 122, 151, 0.16);
+}
+
+[data-theme="day"] .multimodal-analysis .bridge-status {
+    background: rgba(232, 130, 154, 0.14);
+    color: var(--heal-rose);
+}
+
+[data-theme="day"] .multimodal-analysis .bridge-status.accent {
+    background: rgba(124, 174, 155, 0.16);
+    color: var(--heal-sage-strong);
+}
+
+[data-theme="day"] .multimodal-analysis .knowledge-source-chip {
+    background: rgba(232, 130, 154, 0.06);
+    border-color: rgba(224, 122, 151, 0.16);
+    color: var(--theme-text-secondary);
+}
+
+[data-theme="day"] .multimodal-analysis .knowledge-source-chip i {
+    color: var(--heal-rose);
+}
+
+[data-theme="day"] .multimodal-analysis .emotion-signal-pill {
+    background: rgba(124, 174, 155, 0.1);
+    border-color: rgba(124, 174, 155, 0.18);
+    color: var(--theme-text-secondary);
+}
+
+[data-theme="day"] .multimodal-analysis .emotion-signal-pill strong {
+    color: var(--heal-sage-strong);
+}
+
+/* 语音转写 / 文本内容：暖白底 + 深字确保可读 */
+[data-theme="day"] .multimodal-analysis .text-content-display {
+    background: rgba(255, 252, 250, 0.7);
+    color: var(--theme-text-primary);
+}
+
+/* 结果来源 chip */
+[data-theme="day"] .multimodal-analysis .result-source {
+    background: rgba(232, 130, 154, 0.1);
+    color: var(--heal-rose);
+}
+
+@keyframes pulse {
+
+    0%,
+    100% {
+        box-shadow: 0 0 0 0 var(--theme-primary);
+    }
+
+    50% {
+        box-shadow: 0 0 0 10px transparent;
+    }
+}
+
+/* =====================================================================
+   日间 · 温柔疗愈：动效层（全部仅在 [data-theme="day"] 下生效，夜间零影响）
+   - 结果块 staggered 淡入上移
+   - emoji 呼吸 / 波形闲时呼吸 / 进度条流光 / spinner 柔光 / 空状态浮动
+   - 卡片 hover 用 box-shadow（淡入动画锁定了 transform，故不用位移）
+   ===================================================================== */
+@keyframes mm-block-fade-up {
+    from {
+        opacity: 0;
+        transform: translateY(14px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes mm-emoji-breathe {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.08);
+    }
+}
+
+@keyframes mm-wave-idle {
+    0%, 100% {
+        transform: scaleY(0.6);
+    }
+    50% {
+        transform: scaleY(1);
+    }
+}
+
+@keyframes mm-progress-shimmer {
+    from {
+        background-position: -160% 0;
+    }
+    to {
+        background-position: 160% 0;
+    }
+}
+
+@keyframes mm-spinner-glow {
+    0%, 100% {
+        box-shadow: 0 0 0 0 rgba(224, 122, 151, 0);
+    }
+    50% {
+        box-shadow: 0 0 22px 2px rgba(224, 122, 151, 0.28);
+    }
+}
+
+@keyframes mm-float {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-8px);
+    }
+}
+
+/* 结果块进场：错开淡入上移 */
+[data-theme="day"] .multimodal-analysis .result-content > * {
+    animation: mm-block-fade-up 0.5s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+[data-theme="day"] .multimodal-analysis .result-content > *:nth-child(1) { animation-delay: 0.02s; }
+[data-theme="day"] .multimodal-analysis .result-content > *:nth-child(2) { animation-delay: 0.08s; }
+[data-theme="day"] .multimodal-analysis .result-content > *:nth-child(3) { animation-delay: 0.14s; }
+[data-theme="day"] .multimodal-analysis .result-content > *:nth-child(4) { animation-delay: 0.20s; }
+[data-theme="day"] .multimodal-analysis .result-content > *:nth-child(5) { animation-delay: 0.26s; }
+[data-theme="day"] .multimodal-analysis .result-content > *:nth-child(6) { animation-delay: 0.32s; }
+[data-theme="day"] .multimodal-analysis .result-content > *:nth-child(7) { animation-delay: 0.38s; }
+[data-theme="day"] .multimodal-analysis .result-content > *:nth-child(8) { animation-delay: 0.44s; }
+
+/* 卡片 hover：柔光加强（不用位移，避免与淡入动画的 transform 冲突） */
+[data-theme="day"] .multimodal-analysis .result-block {
+    transition: box-shadow 0.3s ease, border-color 0.3s ease, background 0.3s ease;
+}
+[data-theme="day"] .multimodal-analysis .result-block:hover {
+    box-shadow: 0 10px 26px rgba(224, 122, 151, 0.16);
+    border-color: rgba(224, 122, 151, 0.34);
+}
+[data-theme="day"] .multimodal-analysis .capture-card {
+    transition: box-shadow 0.3s ease, border-color 0.3s ease, transform 0.3s cubic-bezier(0.22, 1, 0.36, 1);
+}
+[data-theme="day"] .multimodal-analysis .capture-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 12px 30px rgba(224, 122, 151, 0.18);
+}
+
+/* 概览 emoji 呼吸 */
+[data-theme="day"] .multimodal-analysis .overview-emoji {
+    display: inline-block;
+    animation: mm-emoji-breathe 3.4s ease-in-out infinite;
+}
+
+/* 波形闲时呼吸（active 时由 JS 控制高度，故仅未激活时呼吸） */
+[data-theme="day"] .multimodal-analysis .wave-bar:not(.active) {
+    animation: mm-wave-idle 2.6s ease-in-out infinite;
+    transform-origin: center;
+}
+
+/* 进度条流光叠加 */
+[data-theme="day"] .multimodal-analysis .progress-fill {
+    background-image:
+        linear-gradient(90deg, var(--heal-rose) 0%, var(--heal-rose-soft) 100%),
+        linear-gradient(100deg, transparent 30%, rgba(255, 255, 255, 0.55) 50%, transparent 70%);
+    background-size: 100% 100%, 200% 100%;
+    background-repeat: no-repeat;
+    animation: mm-progress-shimmer 1.6s linear infinite;
+}
+
+/* spinner 柔光呼吸环 */
+[data-theme="day"] .multimodal-analysis .spinner {
+    border-color: rgba(224, 122, 151, 0.22);
+    border-top-color: var(--heal-rose);
+    animation: spin 1s linear infinite, mm-spinner-glow 1.8s ease-in-out infinite;
+}
+
+/* 空状态图标缓慢浮动 */
+[data-theme="day"] .multimodal-analysis .empty-state i {
+    animation: mm-float 3.6s ease-in-out infinite;
+}
+
+/* 尊重「减少动效」系统偏好：全部关停，并复位到稳定终态 */
+@media (prefers-reduced-motion: reduce) {
+    [data-theme="day"] .multimodal-analysis .result-content > *,
+    [data-theme="day"] .multimodal-analysis .overview-emoji,
+    [data-theme="day"] .multimodal-analysis .wave-bar:not(.active),
+    [data-theme="day"] .multimodal-analysis .progress-fill,
+    [data-theme="day"] .multimodal-analysis .spinner,
+    [data-theme="day"] .multimodal-analysis .empty-state i {
+        animation: none !important;
+    }
+    [data-theme="day"] .multimodal-analysis .result-content > * {
+        opacity: 1;
+        transform: none;
+    }
+    [data-theme="day"] .multimodal-analysis .spinner {
+        animation: spin 1s linear infinite !important;
+    }
+}

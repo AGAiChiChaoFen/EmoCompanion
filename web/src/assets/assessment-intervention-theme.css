@@ -1,0 +1,409 @@
+/* 评估干预页面主题样式覆盖 */
+
+/* =====================================================================
+   日间 · 温柔疗愈配色（仅本页作用域生效）
+   与 multimodal-theme.css / avatar-theme.css 保持同一语义色体系
+   ===================================================================== */
+[data-theme="day"] .assessment-workbench {
+  --theme-primary: #e07a97;
+  --theme-primary-light: #f2a7bb;
+  --theme-primary-dark: #c25a77;
+  --theme-bg-card: rgba(255, 252, 250, 0.9);
+  --theme-bg-input: rgba(253, 246, 243, 0.92);
+  --theme-text-primary: #4a3d43;
+  --theme-text-secondary: #6f5f66;
+  --theme-text-muted: #9c8b92;
+  --theme-border: rgba(224, 122, 151, 0.22);
+  --theme-shadow: 0 8px 24px rgba(224, 122, 151, 0.16);
+  --theme-shadow-hover: 0 14px 34px rgba(224, 122, 151, 0.26);
+  --heal-rose: #e07a97;
+  --heal-rose-soft: #f2a7bb;
+  --heal-sage: #7cae9b;
+  --heal-sage-strong: #5f9a85;
+  --heal-amber: #e0a04a;
+  --heal-lavender: #a99bd4;
+  --heal-lavender-strong: #8b7bc4;
+}
+
+/* 页面暖调背景 */
+[data-theme="day"] .assessment-workbench.assessment-workbench {
+  background:
+    radial-gradient(circle at 10% 8%, rgba(242, 167, 187, 0.22), transparent 40%),
+    radial-gradient(circle at 90% 90%, rgba(169, 155, 212, 0.18), transparent 44%),
+    radial-gradient(circle at 55% 50%, rgba(124, 174, 155, 0.08), transparent 36%),
+    linear-gradient(135deg, #fdf7f3 0%, #fbeef1 48%, #f3eefb 100%);
+}
+
+/* =====================================================================
+   卡片暖调质感
+   ===================================================================== */
+[data-theme="day"] .assessment-workbench .workbench-card {
+  background: linear-gradient(145deg, rgba(255, 252, 250, 0.96) 0%, rgba(251, 238, 241, 0.88) 100%);
+  border-color: rgba(224, 122, 151, 0.2);
+  box-shadow: 0 10px 32px rgba(224, 122, 151, 0.12);
+}
+
+[data-theme="day"] .assessment-workbench .workbench-card::before {
+  background: linear-gradient(90deg, var(--heal-rose), var(--heal-lavender), transparent 85%);
+}
+
+[data-theme="day"] .assessment-workbench .intervention-card::before {
+  background: linear-gradient(90deg, var(--heal-amber), var(--heal-rose-soft), transparent 85%);
+}
+
+[data-theme="day"] .assessment-workbench .card-head {
+  border-bottom-color: rgba(224, 122, 151, 0.14);
+}
+
+/* 标题图标 */
+[data-theme="day"] .assessment-workbench .title-icon {
+  color: var(--heal-rose);
+  background: rgba(224, 122, 151, 0.12);
+}
+
+[data-theme="day"] .assessment-workbench .intervention-card .title-icon {
+  color: var(--heal-amber);
+  background: rgba(224, 160, 74, 0.14);
+}
+
+/* =====================================================================
+   知识文档卡
+   ===================================================================== */
+[data-theme="day"] .assessment-workbench .source-summary > div,
+[data-theme="day"] .assessment-workbench .source-summary > p {
+  background: rgba(253, 246, 243, 0.85);
+  border-color: rgba(224, 122, 151, 0.16);
+}
+
+[data-theme="day"] .assessment-workbench .source-summary strong {
+  color: var(--heal-rose);
+}
+
+[data-theme="day"] .assessment-workbench .source-summary > p i {
+  color: var(--heal-sage-strong);
+}
+
+[data-theme="day"] .assessment-workbench .document-row {
+  background: rgba(253, 246, 243, 0.7);
+}
+
+[data-theme="day"] .assessment-workbench .document-row:hover {
+  border-color: rgba(224, 122, 151, 0.3);
+  background: rgba(242, 167, 187, 0.1);
+}
+
+[data-theme="day"] .assessment-workbench .file-glyph {
+  color: var(--heal-lavender-strong);
+  background: rgba(169, 155, 212, 0.13);
+}
+
+[data-theme="day"] .assessment-workbench .service-pill {
+  background: rgba(95, 154, 133, 0.12);
+  color: var(--heal-sage-strong);
+}
+
+[data-theme="day"] .assessment-workbench .service-pill i {
+  background: var(--heal-sage-strong);
+  box-shadow: 0 0 0 4px rgba(95, 154, 133, 0.14);
+}
+
+[data-theme="day"] .assessment-workbench .service-pill.offline {
+  color: #e06666;
+  background: rgba(224, 102, 102, 0.1);
+}
+
+/* =====================================================================
+   风险评估卡
+   ===================================================================== */
+[data-theme="day"] .assessment-workbench .assessment-card {
+  --risk: var(--heal-sage-strong);
+}
+
+[data-theme="day"] .assessment-workbench .assessment-card.risk-attention {
+  --risk: var(--heal-amber);
+}
+
+[data-theme="day"] .assessment-workbench .assessment-card.risk-high {
+  --risk: #e2535e;
+}
+
+[data-theme="day"] .assessment-workbench .result-source {
+  color: var(--heal-rose);
+  background: rgba(224, 122, 151, 0.1);
+}
+
+[data-theme="day"] .assessment-workbench .risk-ring {
+  border-color: color-mix(in srgb, var(--risk) 38%, transparent);
+  background: radial-gradient(circle, color-mix(in srgb, var(--risk) 14%, transparent), transparent 68%);
+  box-shadow:
+    inset 0 0 0 7px color-mix(in srgb, var(--risk) 5%, transparent),
+    0 0 28px color-mix(in srgb, var(--risk) 18%, transparent);
+}
+
+[data-theme="day"] .assessment-workbench .risk-ring strong {
+  color: var(--risk);
+}
+
+[data-theme="day"] .assessment-workbench .risk-scale span.active {
+  color: var(--risk);
+  border-color: var(--risk);
+}
+
+[data-theme="day"] .assessment-workbench .fact-row {
+  background: rgba(253, 246, 243, 0.88);
+  border-left-color: rgba(224, 122, 151, 0.45);
+}
+
+[data-theme="day"] .assessment-workbench .emotion-fact em {
+  background: rgba(224, 122, 151, 0.1);
+  color: var(--heal-rose);
+}
+
+[data-theme="day"] .assessment-workbench .evidence-strip span {
+  background: rgba(255, 252, 250, 0.82);
+  border-color: rgba(224, 122, 151, 0.16);
+}
+
+[data-theme="day"] .assessment-workbench .evidence-strip i {
+  color: var(--risk);
+}
+
+/* =====================================================================
+   知识图谱卡
+   ===================================================================== */
+[data-theme="day"] .assessment-workbench .graph-stage {
+  background:
+    radial-gradient(circle at 50% 45%, rgba(224, 122, 151, 0.09), transparent 38%),
+    linear-gradient(rgba(224, 122, 151, 0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(169, 155, 212, 0.03) 1px, transparent 1px);
+  background-size: auto, 28px 28px, 28px 28px;
+}
+
+[data-theme="day"] .assessment-workbench .graph-legend span {
+  background: rgba(255, 252, 250, 0.88);
+  border-color: rgba(224, 122, 151, 0.16);
+}
+
+[data-theme="day"] .assessment-workbench .graph-legend i {
+  background: var(--heal-rose);
+}
+
+[data-theme="day"] .assessment-workbench .node-halo {
+  fill: rgba(224, 122, 151, 0.05);
+  stroke: rgba(224, 122, 151, 0.13);
+}
+
+[data-theme="day"] .assessment-workbench .graph-empty i {
+  color: var(--heal-rose);
+}
+
+[data-theme="day"] .assessment-workbench .node-popover {
+  background: rgba(255, 252, 250, 0.94);
+  border-color: rgba(224, 122, 151, 0.24);
+  box-shadow: 0 14px 34px rgba(224, 122, 151, 0.16);
+}
+
+[data-theme="day"] .assessment-workbench .node-popover small {
+  color: var(--heal-rose);
+}
+
+[data-theme="day"] .assessment-workbench .graph-controls select {
+  background: rgba(253, 246, 243, 0.88);
+  border-color: rgba(224, 122, 151, 0.2);
+  color: var(--theme-text-secondary);
+}
+
+/* =====================================================================
+   干预建议卡
+   ===================================================================== */
+[data-theme="day"] .assessment-workbench .intervention-list article {
+  background: rgba(253, 246, 243, 0.78);
+  border-color: rgba(224, 122, 151, 0.16);
+}
+
+[data-theme="day"] .assessment-workbench .intervention-list article:hover {
+  background: rgba(242, 167, 187, 0.14);
+  border-color: rgba(224, 122, 151, 0.32);
+  box-shadow: 0 6px 20px rgba(224, 122, 151, 0.14);
+}
+
+[data-theme="day"] .assessment-workbench .plan-index {
+  color: rgba(224, 160, 74, 0.7);
+}
+
+[data-theme="day"] .assessment-workbench .plan-icon {
+  color: var(--heal-amber);
+  background: rgba(224, 160, 74, 0.13);
+}
+
+[data-theme="day"] .assessment-workbench .intervention-list small {
+  color: var(--heal-amber);
+}
+
+[data-theme="day"] .assessment-workbench .plan-badge {
+  color: var(--heal-amber);
+  background: rgba(224, 160, 74, 0.12);
+}
+
+[data-theme="day"] .assessment-workbench .safety-note {
+  color: #b5692a;
+  background: rgba(224, 160, 74, 0.1);
+  border: 1px solid rgba(224, 160, 74, 0.18);
+}
+
+/* =====================================================================
+   按钮 / 操作控件
+   ===================================================================== */
+[data-theme="day"] .assessment-workbench .card-actions button,
+[data-theme="day"] .assessment-workbench .icon-upload,
+[data-theme="day"] .assessment-workbench .graph-controls button {
+  background: rgba(253, 246, 243, 0.88);
+  border-color: rgba(224, 122, 151, 0.2);
+  color: var(--theme-text-secondary);
+}
+
+[data-theme="day"] .assessment-workbench .card-actions button:hover,
+[data-theme="day"] .assessment-workbench .icon-upload:hover,
+[data-theme="day"] .assessment-workbench .graph-controls button:hover {
+  background: rgba(242, 167, 187, 0.18);
+  border-color: rgba(224, 122, 151, 0.36);
+  color: var(--heal-rose);
+}
+
+/* =====================================================================
+   动效层
+   ===================================================================== */
+
+/* 卡片进场：错开淡入上浮 */
+@keyframes ai-card-fade-up {
+  from { opacity: 0; transform: translateY(18px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+[data-theme="day"] .assessment-workbench .workbench-card {
+  animation: ai-card-fade-up 0.55s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+[data-theme="day"] .assessment-workbench .workbench-card:nth-child(1) { animation-delay: 0.04s; }
+[data-theme="day"] .assessment-workbench .workbench-card:nth-child(2) { animation-delay: 0.12s; }
+[data-theme="day"] .assessment-workbench .workbench-card:nth-child(3) { animation-delay: 0.20s; }
+[data-theme="day"] .assessment-workbench .workbench-card:nth-child(4) { animation-delay: 0.28s; }
+
+/* 卡片 hover 浮起 */
+[data-theme="day"] .assessment-workbench .workbench-card {
+  transition: box-shadow 0.3s ease, border-color 0.3s ease, transform 0.3s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+[data-theme="day"] .assessment-workbench .workbench-card:hover {
+  box-shadow: 0 18px 44px rgba(224, 122, 151, 0.2);
+  border-color: rgba(224, 122, 151, 0.32);
+  transform: translateY(-2px);
+}
+
+/* 文档行滑入 */
+@keyframes ai-row-slide-in {
+  from { opacity: 0; transform: translateX(-10px); }
+  to   { opacity: 1; transform: translateX(0); }
+}
+
+[data-theme="day"] .assessment-workbench .document-row {
+  animation: ai-row-slide-in 0.38s cubic-bezier(0.22, 1, 0.36, 1) both;
+  transition: transform 0.22s ease, border-color 0.22s ease, background 0.22s ease;
+}
+
+[data-theme="day"] .assessment-workbench .document-row:nth-child(1) { animation-delay: 0.08s; }
+[data-theme="day"] .assessment-workbench .document-row:nth-child(2) { animation-delay: 0.14s; }
+[data-theme="day"] .assessment-workbench .document-row:nth-child(3) { animation-delay: 0.20s; }
+[data-theme="day"] .assessment-workbench .document-row:nth-child(4) { animation-delay: 0.26s; }
+
+/* 风险环脉冲 */
+@keyframes ai-risk-pulse {
+  0%, 100% { box-shadow: inset 0 0 0 7px color-mix(in srgb, var(--risk) 5%, transparent), 0 0 28px color-mix(in srgb, var(--risk) 18%, transparent); }
+  50%       { box-shadow: inset 0 0 0 7px color-mix(in srgb, var(--risk) 8%, transparent), 0 0 44px color-mix(in srgb, var(--risk) 28%, transparent); }
+}
+
+[data-theme="day"] .assessment-workbench .risk-ring {
+  animation: ai-risk-pulse 3.2s ease-in-out infinite;
+}
+
+/* 干预条目进场（复用已有 plan-in，补充 hover） */
+[data-theme="day"] .assessment-workbench .intervention-list article {
+  transition: background 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease, transform 0.25s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+[data-theme="day"] .assessment-workbench .intervention-list article:hover {
+  transform: translateX(4px);
+}
+
+/* 事实行淡入 */
+@keyframes ai-fact-in {
+  from { opacity: 0; transform: translateX(8px); }
+  to   { opacity: 1; transform: translateX(0); }
+}
+
+[data-theme="day"] .assessment-workbench .fact-row {
+  animation: ai-fact-in 0.44s cubic-bezier(0.22, 1, 0.36, 1) both;
+  transition: background 0.2s ease, border-color 0.2s ease;
+}
+
+[data-theme="day"] .assessment-workbench .fact-row:nth-child(1) { animation-delay: 0.18s; }
+[data-theme="day"] .assessment-workbench .fact-row:nth-child(2) { animation-delay: 0.26s; }
+[data-theme="day"] .assessment-workbench .fact-row:nth-child(3) { animation-delay: 0.34s; }
+
+/* 图谱空状态浮动 */
+@keyframes ai-float {
+  0%, 100% { transform: translateY(0); }
+  50%       { transform: translateY(-8px); }
+}
+
+[data-theme="day"] .assessment-workbench .graph-empty i {
+  animation: ai-float 3.6s ease-in-out infinite;
+}
+
+/* 节点 popover 弹入 */
+@keyframes ai-popover-in {
+  from { opacity: 0; transform: scale(0.92) translateY(-6px); }
+  to   { opacity: 1; transform: scale(1) translateY(0); }
+}
+
+[data-theme="day"] .assessment-workbench .node-popover {
+  animation: ai-popover-in 0.28s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+/* 徽章呼吸 */
+@keyframes ai-badge-breathe {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(224, 122, 151, 0); }
+  50%       { box-shadow: 0 0 0 5px rgba(224, 122, 151, 0.12); }
+}
+
+[data-theme="day"] .assessment-workbench .service-pill:not(.offline) {
+  animation: ai-badge-breathe 3s ease-in-out infinite;
+}
+
+/* 图谱节点 hover 环 */
+[data-theme="day"] .assessment-workbench .graph-node circle:not(.node-halo) {
+  transition: stroke-width 0.2s ease, filter 0.2s ease;
+}
+
+/* =====================================================================
+   尊重「减少动效」系统偏好
+   ===================================================================== */
+@media (prefers-reduced-motion: reduce) {
+  [data-theme="day"] .assessment-workbench .workbench-card,
+  [data-theme="day"] .assessment-workbench .document-row,
+  [data-theme="day"] .assessment-workbench .fact-row,
+  [data-theme="day"] .assessment-workbench .node-popover,
+  [data-theme="day"] .assessment-workbench .graph-empty i,
+  [data-theme="day"] .assessment-workbench .service-pill,
+  [data-theme="day"] .assessment-workbench .risk-ring {
+    animation: none !important;
+    opacity: 1;
+    transform: none;
+  }
+  [data-theme="day"] .assessment-workbench .workbench-card:hover {
+    transform: none;
+  }
+  [data-theme="day"] .assessment-workbench .intervention-list article:hover {
+    transform: none;
+  }
+}

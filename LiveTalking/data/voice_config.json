@@ -1,0 +1,145 @@
+{
+    "version": "1.0",
+    "voices": [
+        {
+            "voice_id": "preset_cherry",
+            "name": "温柔女声 Cherry",
+            "description": "柔和亲切的女性声音",
+            "type": "preset",
+            "icon": "bi bi-person-heart",
+            "qwen_config": {
+                "voice": "Cherry"
+            }
+        },
+        {
+            "voice_id": "preset_serena",
+            "name": "活力女声 Serena",
+            "description": "明快活泼的女性声音",
+            "type": "preset",
+            "icon": "bi bi-emoji-smile",
+            "qwen_config": {
+                "voice": "Serena"
+            }
+        },
+        {
+            "voice_id": "preset_ethan",
+            "name": "沉稳男声 Ethan",
+            "description": "稳重可靠的男性声音",
+            "type": "preset",
+            "icon": "bi bi-shield-check",
+            "qwen_config": {
+                "voice": "Ethan"
+            }
+        },
+        {
+            "voice_id": "preset_mason",
+            "name": "磁性男声 Mason",
+            "description": "低沉有力的男性声音",
+            "type": "preset",
+            "icon": "bi bi-soundwave",
+            "qwen_config": {
+                "voice": "Mason"
+            }
+        },
+        {
+            "voice_id": "preset_lily",
+            "name": "甜美女声 Lily",
+            "description": "甜美可爱的女性声音",
+            "type": "preset",
+            "icon": "bi bi-heart-fill",
+            "qwen_config": {
+                "voice": "Lily"
+            }
+        },
+        {
+            "voice_id": "preset_alex",
+            "name": "专业男声 Alex",
+            "description": "专业清晰的男性声音",
+            "type": "preset",
+            "icon": "bi bi-briefcase-fill",
+            "qwen_config": {
+                "voice": "Alex"
+            }
+        },
+        {
+            "voice_id": "preset_emma",
+            "name": "优雅女声 Emma",
+            "description": "优雅知性的女性声音",
+            "type": "preset",
+            "icon": "bi bi-star-fill",
+            "qwen_config": {
+                "voice": "Emma"
+            }
+        },
+        {
+            "voice_id": "preset_noah",
+            "name": "年轻男声 Noah",
+            "description": "年轻活力的男性声音",
+            "type": "preset",
+            "icon": "bi bi-lightning-fill",
+            "qwen_config": {
+                "voice": "Noah"
+            }
+        },
+        {
+            "voice_id": "preset_sophia",
+            "name": "温暖女声 Sophia",
+            "description": "温暖治愈的女性声音",
+            "type": "preset",
+            "icon": "bi bi-sun-fill",
+            "qwen_config": {
+                "voice": "Sophia"
+            }
+        },
+        {
+            "voice_id": "preset_oliver",
+            "name": "成熟男声 Oliver",
+            "description": "成熟稳健的男性声音",
+            "type": "preset",
+            "icon": "bi bi-person-badge-fill",
+            "qwen_config": {
+                "voice": "Oliver"
+            }
+        },
+        {
+            "voice_id": "preset_mia",
+            "name": "清新女声 Mia",
+            "description": "清新自然的女性声音",
+            "type": "preset",
+            "icon": "bi bi-flower1",
+            "qwen_config": {
+                "voice": "Mia"
+            }
+        },
+        {
+            "voice_id": "preset_lucas",
+            "name": "友好男声 Lucas",
+            "description": "友好亲和的男性声音",
+            "type": "preset",
+            "icon": "bi bi-hand-thumbs-up-fill",
+            "qwen_config": {
+                "voice": "Lucas"
+            }
+        },
+        {
+            "voice_id": "preset_ava",
+            "name": "知性女声 Ava",
+            "description": "知性理性的女性声音",
+            "type": "preset",
+            "icon": "bi bi-book-fill",
+            "qwen_config": {
+                "voice": "Ava"
+            }
+        },
+        {
+            "voice_id": "preset_james",
+            "name": "权威男声 James",
+            "description": "权威专业的男性声音",
+            "type": "preset",
+            "icon": "bi bi-award-fill",
+            "qwen_config": {
+                "voice": "James"
+            }
+        }
+    ]
+}

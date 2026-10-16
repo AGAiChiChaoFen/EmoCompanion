@@ -1,0 +1,325 @@
+{
+  "source": "ModelScope AGAiChiChaoFen/wbg server backup",
+  "revision": "c9e728791fd18dc0f2e433f6d5613dd299f1103b",
+  "archive_sha256": "9213e4c91680cf92bfbfe70d315af4b841c159e85e9843c9e5c99b1d812f8d72",
+  "files": [
+    {
+      "path": "checkpoints/ditto_cfg/v0.4_hubert_cfg_pytorch.pkl",
+      "bytes": 31002,
+      "storage": "copy",
+      "sha256": "8e4c9ecb8dbb5aa4d22cb3f9b2c6ceabc62499b04af5fe074826d5b1044c4146"
+    },
+    {
+      "path": "checkpoints/ditto_pytorch/aux_models/2d106det.onnx",
+      "bytes": 5030888,
+      "storage": "hardlink",
+      "sha256": "f001b856447c413801ef5c42091ed0cd516fcd21f2d6b79635b1e733a7109dbf"
+    },
+    {
+      "path": "checkpoints/ditto_pytorch/aux_models/det_10g.onnx",
+      "bytes": 16923827,
+      "storage": "hardlink",
+      "sha256": "5838f7fe053675b1c7a08b633df49e7af5495cee0493c7dcf6697200b85b5b91"
+    },
+    {
+      "path": "checkpoints/ditto_pytorch/aux_models/face_landmarker.task",
+      "bytes": 3758596,
+      "storage": "hardlink",
+      "sha256": "64184e229b263107bc2b804c6625db1341ff2bb731874b0bcc2fe6544e0bc9ff"
+    },
+    {
+      "path": "checkpoints/ditto_pytorch/aux_models/hubert_streaming_fix_kv.onnx",
+      "bytes": 1460740880,
+      "storage": "hardlink",
+      "sha256": "04cd6c7c388aaf99cdea8d4599cefede9930e60d6051abd5a33c791aeb931697"
+    },
+    {
+      "path": "checkpoints/ditto_pytorch/aux_models/landmark203.onnx",
+      "bytes": 114666491,
+      "storage": "hardlink",
+      "sha256": "31d22a5041326c31f19b78886939a634a5aedcaa5ab8b9b951a1167595d147db"
+    },
+    {
+      "path": "checkpoints/ditto_pytorch/models/appearance_extractor.pth",
+      "bytes": 3387959,
+      "storage": "hardlink",
+      "sha256": "5279bb8654293dbdf327030b397f107237dd9212fb11dd75b83dfb635211ceb5"
+    },
+    {
+      "path": "checkpoints/ditto_pytorch/models/decoder.pth",
+      "bytes": 221813590,
+      "storage": "hardlink",
+      "sha256": "4780afc7909a9f84e24c01d73b31a555ef651521a1fe3b2429bd04534d992aee"
+    },
+    {
+      "path": "checkpoints/ditto_pytorch/models/lmdm_v0.4_hubert.pth",
+      "bytes": 191247715,
+      "storage": "hardlink",
+      "sha256": "40ef5aa80b76e9fc45a0f606cdd507bbeb09d3d078b016ac61fc47e369be8c94"
+    },
+    {
+      "path": "checkpoints/ditto_pytorch/models/motion_extractor.pth",
+      "bytes": 112545506,
+      "storage": "hardlink",
+      "sha256": "251e6a94ad667a1d0c69526d292677165110ef7f0cf0f6d199f0e414e8aa0ca5"
+    },
+    {
+      "path": "checkpoints/ditto_pytorch/models/stitch_network.pth",
+      "bytes": 2393098,
+      "storage": "hardlink",
+      "sha256": "3652d5a3f95099141a56986aaddec92fadf0a73c87a20fac9a2c07c32b28b611"
+    },
+    {
+      "path": "checkpoints/ditto_pytorch/models/warp_network.pth",
+      "bytes": 182180086,
+      "storage": "hardlink",
+      "sha256": "2f61a6f265fe344f14132364859a78bdbbc2068577170693da57fb96d636e282"
+    },
+    {
+      "path": "PersonaVLM/checkpoints/rl/.gitattributes",
+      "bytes": 1570,
+      "storage": "copy",
+      "sha256": "34448b82c17d60fec9b65b1f093c115ddbaadc04beb1b0140b6bfed2e012a930"
+    },
+    {
+      "path": "PersonaVLM/checkpoints/rl/.gitkeep",
+      "bytes": 1,
+      "storage": "copy",
+      "sha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b"
+    },
+    {
+      "path": "PersonaVLM/checkpoints/rl/added_tokens.json",
+      "bytes": 605,
+      "storage": "copy",
+      "sha256": "58b54bbe36fc752f79a24a271ef66a0a0830054b4dfad94bde757d851968060b"
+    },
+    {
+      "path": "PersonaVLM/checkpoints/rl/chat_template.json",
+      "bytes": 1049,
+      "storage": "copy",
+      "sha256": "94174d7176c52a7192f96fc34eb2cf23c7c2059d63cdbfadca1586ba89731fb7"
+    },
+    {
+      "path": "PersonaVLM/checkpoints/rl/config.json",
+      "bytes": 1517,
+      "storage": "copy",
+      "sha256": "435ab3f40355b81ecf14c2385b071086e2760d45a4fad9a18b360bc403d25dc7"
+    },
+    {
+      "path": "PersonaVLM/checkpoints/rl/generation_config.json",
+      "bytes": 260,
+      "storage": "copy",
+      "sha256": "90e92cbc8634d6f5b1cb1ae58a3c48724a1ce1f11f8b7aecb5b9b3fd5d5a06bf"
+    },
+    {
+      "path": "PersonaVLM/checkpoints/rl/merges.txt",
+      "bytes": 1671853,
+      "storage": "hardlink",
+      "sha256": "8831e4f1a044471340f7c0a83d7bd71306a5b867e95fd870f74d0c5308a904d5"
+    },
+    {
+      "path": "PersonaVLM/checkpoints/rl/model-00001-of-00004.safetensors",
+      "bytes": 4968243304,
+      "storage": "hardlink",
+      "sha256": "894274870a8d8dd668b04144549f308ece505ce91f84b2f534d1e64ff04e54fb"
+    },
+    {
+      "path": "PersonaVLM/checkpoints/rl/model-00002-of-00004.safetensors",
+      "bytes": 4991495816,
+      "storage": "hardlink",
+      "sha256": "0c0ac12a9e837fc5e1ae672bfac8e76b2d09ed732bcef13b97528b9d4d398087"
+    },
+    {
+      "path": "PersonaVLM/checkpoints/rl/model-00003-of-00004.safetensors",
+      "bytes": 4932751040,
+      "storage": "hardlink",
+      "sha256": "81dbd99863728919e65ca3843b393650ae55937af9e6ccfb93d3cb7a3c7d34dc"
+    },
+    {
+      "path": "PersonaVLM/checkpoints/rl/model-00004-of-00004.safetensors",
+      "bytes": 1691924384,
+      "storage": "hardlink",
+      "sha256": "163253a67f96dfda580f7a2efe47761e8ff367800a14d2c524163b2ddeac6b91"
+    },
+    {
+      "path": "PersonaVLM/checkpoints/rl/model.safetensors.index.json",
+      "bytes": 57619,
+      "storage": "copy",
+      "sha256": "3067e9b0f35596ff3426a0d0ec8c982a51fa1e110c4fc30dcf3be9ea37409df6"
+    },
+    {
+      "path": "PersonaVLM/checkpoints/rl/preprocessor_config.json",
+      "bytes": 571,
+      "storage": "copy",
+      "sha256": "6de04a44064d7700831a2f95e39150795518ab3e03b219b8fe965f3d4744e809"
+    },
+    {
+      "path": "PersonaVLM/checkpoints/rl/README.md",
+      "bytes": 2889,
+      "storage": "copy",
+      "sha256": "d232d4598a207082f04ce3ff31b4d26160e891275ea0222ad916c643da38a753"
+    },
+    {
+      "path": "PersonaVLM/checkpoints/rl/special_tokens_map.json",
+      "bytes": 613,
+      "storage": "copy",
+      "sha256": "76862e765266b85aa9459767e33cbaf13970f327a0e88d1c65846c2ddd3a1ecd"
+    },
+    {
+      "path": "PersonaVLM/checkpoints/rl/tokenizer.json",
+      "bytes": 11421890,
+      "storage": "hardlink",
+      "sha256": "6ae8594f633daa21dc0e04606279856d0ccb8abb64bb7a5a93e72531fb12b9d9"
+    },
+    {
+      "path": "PersonaVLM/checkpoints/rl/tokenizer_config.json",
+      "bytes": 5802,
+      "storage": "copy",
+      "sha256": "2645fe098b1a17d1d83cc2c63b9d838adfb68557d3a177e9b60656e3ca130b02"
+    },
+    {
+      "path": "PersonaVLM/checkpoints/rl/vocab.json",
+      "bytes": 2776833,
+      "storage": "hardlink",
+      "sha256": "ca10d7e9fb3ed18575dd1e277a2579c16d108e32f27439684afa0e10b1440910"
+    },
+    {
+      "path": "PersonaVLM/checkpoints/openai-clip/.gitattributes",
+      "bytes": 690,
+      "storage": "copy",
+      "sha256": "98cf30ae2568ea1d18641cc0d1d9a2f9041cc43aea81f5d719654abd9e290e0d"
+    },
+    {
+      "path": "PersonaVLM/checkpoints/openai-clip/.gitkeep",
+      "bytes": 1,
+      "storage": "copy",
+      "sha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b"
+    },
+    {
+      "path": "PersonaVLM/checkpoints/openai-clip/config.json",
+      "bytes": 4186,
+      "storage": "copy",
+      "sha256": "b575ef3c36f2a057fa19e221650105052d61cc9c1a972ec15019c6261ec98770"
+    },
+    {
+      "path": "PersonaVLM/checkpoints/openai-clip/merges.txt",
+      "bytes": 524657,
+      "storage": "copy",
+      "sha256": "f526393189112391ce6f9795d4695f704121ce452c3aad1f5335cc41337eba85"
+    },
+    {
+      "path": "PersonaVLM/checkpoints/openai-clip/preprocessor_config.json",
+      "bytes": 316,
+      "storage": "copy",
+      "sha256": "910e70b3956ac9879ebc90b22fb3bc8a75b6a0677814500101a4c072bd7857bd"
+    },
+    {
+      "path": "PersonaVLM/checkpoints/openai-clip/pytorch_model.bin",
+      "bytes": 605247071,
+      "storage": "hardlink",
+      "sha256": "a63082132ba4f97a80bea76823f544493bffa8082296d62d71581a4feff1576f"
+    },
+    {
+      "path": "PersonaVLM/checkpoints/openai-clip/README.md",
+      "bytes": 7942,
+      "storage": "copy",
+      "sha256": "8f0e8c678e0afe5f384f3bf8a6694c1cb53c41e52f86277967b6c5354cb0f9f4"
+    },
+    {
+      "path": "PersonaVLM/checkpoints/openai-clip/special_tokens_map.json",
+      "bytes": 389,
+      "storage": "copy",
+      "sha256": "f8c0d6c39aee3f8431078ef6646567b0aba7f2246e9c54b8b99d55c22b707cbf"
+    },
+    {
+      "path": "PersonaVLM/checkpoints/openai-clip/tokenizer.json",
+      "bytes": 2224041,
+      "storage": "hardlink",
+      "sha256": "b556ac8c99757ffb677208af34bc8c6721572114111a6e0aaf5fa69ff0b8d842"
+    },
+    {
+      "path": "PersonaVLM/checkpoints/openai-clip/tokenizer_config.json",
+      "bytes": 592,
+      "storage": "copy",
+      "sha256": "34b7336e4bee12e0a9730eaf5189f582ef3c3eea5027f65730e5717256755aad"
+    },
+    {
+      "path": "PersonaVLM/checkpoints/openai-clip/vocab.json",
+      "bytes": 862328,
+      "storage": "copy",
+      "sha256": "5047b556ce86ccaf6aa22b3ffccfc52d391ea4accdab9c2f2407da5b742d4363"
+    },
+    {
+      "path": "PersonaVLM/checkpoints/sentence-transformers/all-MiniLM-L6-v2/config.json",
+      "bytes": 612,
+      "storage": "copy",
+      "sha256": "953f9c0d463486b10a6871cc2fd59f223b2c70184f49815e7efbcab5d8908b41"
+    },
+    {
+      "path": "PersonaVLM/checkpoints/sentence-transformers/all-MiniLM-L6-v2/config_sentence_transformers.json",
+      "bytes": 116,
+      "storage": "copy",
+      "sha256": "061ca9d39661d6c6d6de5ba27f79a1cd5770ea247f8d46412a68a498dc5ac9f3"
+    },
+    {
+      "path": "PersonaVLM/checkpoints/sentence-transformers/all-MiniLM-L6-v2/data_config.json",
+      "bytes": 39265,
+      "storage": "copy",
+      "sha256": "32edcb108fc2516b920734a862ae0692bcae1c5d45d5f8d972cb0d53434a4c54"
+    },
+    {
+      "path": "PersonaVLM/checkpoints/sentence-transformers/all-MiniLM-L6-v2/model.safetensors",
+      "bytes": 90868376,
+      "storage": "hardlink",
+      "sha256": "53aa51172d142c89d9012cce15ae4d6cc0ca6895895114379cacb4fab128d9db"
+    },
+    {
+      "path": "PersonaVLM/checkpoints/sentence-transformers/all-MiniLM-L6-v2/modules.json",
+      "bytes": 349,
+      "storage": "copy",
+      "sha256": "84e40c8e006c9b1d6c122e02cba9b02458120b5fb0c87b746c41e0207cf642cf"
+    },
+    {
+      "path": "PersonaVLM/checkpoints/sentence-transformers/all-MiniLM-L6-v2/README.md",
+      "bytes": 10502,
+      "storage": "copy",
+      "sha256": "dcd602d2fd35c203a247304a06fec6654a12f7941b739f9221a064fe8dc3b7f0"
+    },
+    {
+      "path": "PersonaVLM/checkpoints/sentence-transformers/all-MiniLM-L6-v2/sentence_bert_config.json",
+      "bytes": 53,
+      "storage": "copy",
+      "sha256": "fc1993fde0a95c24ec6c022539d41cf6e2f7c9721e5415d6fb6897472a9cd4b7"
+    },
+    {
+      "path": "PersonaVLM/checkpoints/sentence-transformers/all-MiniLM-L6-v2/special_tokens_map.json",
+      "bytes": 112,
+      "storage": "copy",
+      "sha256": "303df45a03609e4ead04bc3dc1536d0ab19b5358db685b6f3da123d05ec200e3"
+    },
+    {
+      "path": "PersonaVLM/checkpoints/sentence-transformers/all-MiniLM-L6-v2/tokenizer.json",
+      "bytes": 466247,
+      "storage": "copy",
+      "sha256": "be50c3628f2bf5bb5e3a7f17b1f74611b2561a3a27eeab05e5aa30f411572037"
+    },
+    {
+      "path": "PersonaVLM/checkpoints/sentence-transformers/all-MiniLM-L6-v2/tokenizer_config.json",
+      "bytes": 350,
+      "storage": "copy",
+      "sha256": "acb92769e8195aabd29b7b2137a9e6d6e25c476a4f15aa4355c233426c61576b"
+    },
+    {
+      "path": "PersonaVLM/checkpoints/sentence-transformers/all-MiniLM-L6-v2/vocab.txt",
+      "bytes": 231508,
+      "storage": "copy",
+      "sha256": "07eced375cec144d27c900241f3e339478dec958f92fddbc551f295c992038a3"
+    },
+    {
+      "path": "PersonaVLM/checkpoints/sentence-transformers/all-MiniLM-L6-v2/1_Pooling/config.json",
+      "bytes": 190,
+      "storage": "copy",
+      "sha256": "4be450dde3b0273bb9787637cfbd28fe04a7ba6ab9d36ac48e92b11e350ffc23"
+    }
+  ]
+}

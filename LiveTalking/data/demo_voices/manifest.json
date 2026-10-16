@@ -1,0 +1,105 @@
+{
+  "version": "1.0",
+  "text": "您好，我是心语伴侣，很高兴陪您慢慢聊一聊。",
+  "provider": "qwen3-tts/qwen3-tts-instruct-flash",
+  "items": [
+    {
+      "voice_id": "preset_cherry",
+      "voice": "Cherry",
+      "name": "温柔女声 Cherry",
+      "description": "柔和亲切的女性声音",
+      "url": "https://nuaa-lishaoyuan-wangbiguang-server.oss-cn-beijing.aliyuncs.com/emotion-companion/static/demo_voices/preset_cherry.wav"
+    },
+    {
+      "voice_id": "preset_serena",
+      "voice": "Serena",
+      "name": "活力女声 Serena",
+      "description": "明快活泼的女性声音",
+      "url": "https://nuaa-lishaoyuan-wangbiguang-server.oss-cn-beijing.aliyuncs.com/emotion-companion/static/demo_voices/preset_serena.wav"
+    },
+    {
+      "voice_id": "preset_ethan",
+      "voice": "Ethan",
+      "name": "沉稳男声 Ethan",
+      "description": "稳重可靠的男性声音",
+      "url": "https://nuaa-lishaoyuan-wangbiguang-server.oss-cn-beijing.aliyuncs.com/emotion-companion/static/demo_voices/preset_ethan.wav"
+    },
+    {
+      "voice_id": "preset_mason",
+      "voice": "Mason",
+      "name": "磁性男声 Mason",
+      "description": "低沉有力的男性声音",
+      "url": "https://nuaa-lishaoyuan-wangbiguang-server.oss-cn-beijing.aliyuncs.com/emotion-companion/static/demo_voices/preset_mason.wav"
+    },
+    {
+      "voice_id": "preset_lily",
+      "voice": "Lily",
+      "name": "甜美女声 Lily",
+      "description": "甜美可爱的女性声音",
+      "url": "https://nuaa-lishaoyuan-wangbiguang-server.oss-cn-beijing.aliyuncs.com/emotion-companion/static/demo_voices/preset_lily.wav"
+    },
+    {
+      "voice_id": "preset_alex",
+      "voice": "Alex",
+      "name": "专业男声 Alex",
+      "description": "专业清晰的男性声音",
+      "url": "https://nuaa-lishaoyuan-wangbiguang-server.oss-cn-beijing.aliyuncs.com/emotion-companion/static/demo_voices/preset_alex.wav"
+    },
+    {
+      "voice_id": "preset_emma",
+      "voice": "Emma",
+      "name": "优雅女声 Emma",
+      "description": "优雅知性的女性声音",
+      "url": "https://nuaa-lishaoyuan-wangbiguang-server.oss-cn-beijing.aliyuncs.com/emotion-companion/static/demo_voices/preset_emma.wav"
+    },
+    {
+      "voice_id": "preset_noah",
+      "voice": "Noah",
+      "name": "年轻男声 Noah",
+      "description": "年轻活力的男性声音",
+      "url": "https://nuaa-lishaoyuan-wangbiguang-server.oss-cn-beijing.aliyuncs.com/emotion-companion/static/demo_voices/preset_noah.wav"
+    },
+    {
+      "voice_id": "preset_sophia",
+      "voice": "Sophia",
+      "name": "温暖女声 Sophia",
+      "description": "温暖治愈的女性声音",
+      "url": "https://nuaa-lishaoyuan-wangbiguang-server.oss-cn-beijing.aliyuncs.com/emotion-companion/static/demo_voices/preset_sophia.wav"
+    },
+    {
+      "voice_id": "preset_oliver",
+      "voice": "Oliver",
+      "name": "成熟男声 Oliver",
+      "description": "成熟稳健的男性声音",
+      "url": "https://nuaa-lishaoyuan-wangbiguang-server.oss-cn-beijing.aliyuncs.com/emotion-companion/static/demo_voices/preset_oliver.wav"
+    },
+    {
+      "voice_id": "preset_mia",
+      "voice": "Mia",
+      "name": "清新女声 Mia",
+      "description": "清新自然的女性声音",
+      "url": "https://nuaa-lishaoyuan-wangbiguang-server.oss-cn-beijing.aliyuncs.com/emotion-companion/static/demo_voices/preset_mia.wav"
+    },
+    {
+      "voice_id": "preset_lucas",
+      "voice": "Lucas",
+      "name": "友好男声 Lucas",
+      "description": "友好亲和的男性声音",
+      "url": "https://nuaa-lishaoyuan-wangbiguang-server.oss-cn-beijing.aliyuncs.com/emotion-companion/static/demo_voices/preset_lucas.wav"
+    },
+    {
+      "voice_id": "preset_ava",
+      "voice": "Ava",
+      "name": "知性女声 Ava",
+      "description": "知性理性的女性声音",
+      "url": "https://nuaa-lishaoyuan-wangbiguang-server.oss-cn-beijing.aliyuncs.com/emotion-companion/static/demo_voices/preset_ava.wav"
+    },
+    {
+      "voice_id": "preset_james",
+      "voice": "James",
+      "name": "权威男声 James",
+      "description": "权威专业的男性声音",
+      "url": "https://nuaa-lishaoyuan-wangbiguang-server.oss-cn-beijing.aliyuncs.com/emotion-companion/static/demo_voices/preset_james.wav"
+    }
+  ]
+}

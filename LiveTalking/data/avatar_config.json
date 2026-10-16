@@ -1,0 +1,113 @@
+{
+  "version": "1.0",
+  "avatars": [
+    {
+      "avatar_id": "preset_default_avatar",
+      "name": "默认数字人形象",
+      "description": "系统默认数字人形象",
+      "type": "preset",
+      "image_path": "data/avatars/default_avatar.png",
+      "accent": "#a78bfa",
+      "accentSoft": "rgba(167, 139, 250, 0.24)",
+      "fallbackIcon": "bi bi-person-circle",
+      "fallbackLabel": "默认形象",
+      "image_url": "https://nuaa-lishaoyuan-wangbiguang-server.oss-cn-beijing.aliyuncs.com/emotion-companion/static/avatars/default_avatar.png"
+    },
+    {
+      "avatar_id": "preset_middle_aged_female",
+      "name": "中年女性陪伴者",
+      "description": "温柔亲切的中年女性形象",
+      "type": "preset",
+      "image_path": "data/avatars/01_middle_aged_female.png",
+      "accent": "#ff6b81",
+      "accentSoft": "rgba(255, 107, 129, 0.24)",
+      "fallbackIcon": "bi bi-person-hearts",
+      "fallbackLabel": "温柔陪伴",
+      "image_url": "https://nuaa-lishaoyuan-wangbiguang-server.oss-cn-beijing.aliyuncs.com/emotion-companion/static/avatars/01_middle_aged_female.png"
+    },
+    {
+      "avatar_id": "preset_young_female_1",
+      "name": "年轻女性陪护",
+      "description": "温柔亲切的年轻女性形象",
+      "type": "preset",
+      "image_path": "data/avatars/02_young_female_1.png",
+      "accent": "#f472b6",
+      "accentSoft": "rgba(244, 114, 182, 0.24)",
+      "fallbackIcon": "bi bi-emoji-smile-fill",
+      "fallbackLabel": "青春活力",
+      "image_url": "https://nuaa-lishaoyuan-wangbiguang-server.oss-cn-beijing.aliyuncs.com/emotion-companion/static/avatars/02_young_female_1.png"
+    },
+    {
+      "avatar_id": "preset_young_male_1",
+      "name": "年轻男性陪护",
+      "description": "专业耐心的年轻男性陪护形象",
+      "type": "preset",
+      "image_path": "data/avatars/03_young_male_1.png",
+      "accent": "#60a5fa",
+      "accentSoft": "rgba(96, 165, 250, 0.24)",
+      "fallbackIcon": "bi bi-shield-check",
+      "fallbackLabel": "耐心照护",
+      "image_url": "https://nuaa-lishaoyuan-wangbiguang-server.oss-cn-beijing.aliyuncs.com/emotion-companion/static/avatars/03_young_male_1.png"
+    },
+    {
+      "avatar_id": "preset_young_female_2",
+      "name": "青春女性伴侣",
+      "description": "活泼开朗的年轻女性形象",
+      "type": "preset",
+      "image_path": "data/avatars/04_young_female_2.png",
+      "accent": "#fb7185",
+      "accentSoft": "rgba(251, 113, 133, 0.24)",
+      "fallbackIcon": "bi bi-heart-pulse-fill",
+      "fallbackLabel": "活力陪伴",
+      "image_url": "https://nuaa-lishaoyuan-wangbiguang-server.oss-cn-beijing.aliyuncs.com/emotion-companion/static/avatars/04_young_female_2.png"
+    },
+    {
+      "avatar_id": "preset_elderly_male",
+      "name": "老年男性同伴",
+      "description": "温和亲切的老年男性形象",
+      "type": "preset",
+      "image_path": "data/avatars/05_elderly_male.png",
+      "accent": "#14b8a6",
+      "accentSoft": "rgba(20, 184, 166, 0.24)",
+      "fallbackIcon": "bi bi-chat-heart-fill",
+      "fallbackLabel": "老友陪伴",
+      "image_url": "https://nuaa-lishaoyuan-wangbiguang-server.oss-cn-beijing.aliyuncs.com/emotion-companion/static/avatars/05_elderly_male.png"
+    },
+    {
+      "avatar_id": "preset_middle_aged_male",
+      "name": "中年男性陪伴者",
+      "description": "成熟稳重、值得信赖的男性形象",
+      "type": "preset",
+      "image_path": "data/avatars/06_middle_aged_male.png",
+      "accent": "#6366f1",
+      "accentSoft": "rgba(99, 102, 241, 0.24)",
+      "fallbackIcon": "bi bi-person-badge-fill",
+      "fallbackLabel": "沉稳陪伴",
+      "image_url": "https://nuaa-lishaoyuan-wangbiguang-server.oss-cn-beijing.aliyuncs.com/emotion-companion/static/avatars/06_middle_aged_male.png"
+    },
+    {
+      "avatar_id": "preset_young_male_2",
+      "name": "青年男性陪护",
+      "description": "温和可靠的年轻男性形象",
+      "type": "preset",
+      "image_path": "data/avatars/07_young_male_2.png",
+      "accent": "#3b82f6",
+      "accentSoft": "rgba(59, 130, 246, 0.24)",
+      "fallbackIcon": "bi bi-shield-fill-check",
+      "fallbackLabel": "可靠陪伴",
+      "image_url": "https://nuaa-lishaoyuan-wangbiguang-server.oss-cn-beijing.aliyuncs.com/emotion-companion/static/avatars/07_young_male_2.png"
+    },
+    {
+      "avatar_id": "preset_elderly_female",
+      "name": "老年女性同伴",
+      "description": "慈祥温暖的老年女性形象",
+      "type": "preset",
+      "image_path": "data/avatars/08_elderly_female.png",
+      "accent": "#a78bfa",
+      "accentSoft": "rgba(167, 139, 250, 0.24)",
+      "fallbackIcon": "bi bi-people-fill",
+      "fallbackLabel": "同龄陪伴",
+      "image_url": "https://nuaa-lishaoyuan-wangbiguang-server.oss-cn-beijing.aliyuncs.com/emotion-companion/static/avatars/08_elderly_female.png"
+    }
+  ]
+}

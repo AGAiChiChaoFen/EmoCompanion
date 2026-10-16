@@ -1,0 +1,83 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# JavaScript / frontend
+node_modules/
+dist/
+build/
+.vite/
+web/.playwright-cli/
+web/output/
+web/personality-history-empty-state.png
+
+# Virtual environments
+.venv/
+venv/
+env/
+
+# Runtime outputs and local logs
+debug/
+logs/
+PersonaVLM/output/
+PersonaVLM/memory_backups/
+*.log
+paramiko_coturn_debug.log
+
+# Large model/checkpoint artifacts. Download or mount these separately.
+checkpoints/
+!PersonaVLM/checkpoints/
+PersonaVLM/checkpoints/**
+!PersonaVLM/checkpoints/rl/
+!PersonaVLM/checkpoints/rl/.gitkeep
+!PersonaVLM/checkpoints/openai-clip/
+!PersonaVLM/checkpoints/openai-clip/.gitkeep
+!PersonaVLM/checkpoints/sentence-transformers/
+!PersonaVLM/checkpoints/sentence-transformers/all-MiniLM-L6-v2/
+!PersonaVLM/checkpoints/sentence-transformers/all-MiniLM-L6-v2/.gitkeep
+*.ckpt
+*.pth
+*.pt
+*.onnx
+*.safetensors
+
+# Local secrets
+.env
+.env.*
+!.env.example
+config.env
+
+# OS / editor
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+
+# Local assistant notes and preparation records
+AGENTS.md
+CLAUDE.md
+findings.md
+progress.md
+task_plan.md
+docs/*_20261014.md
+resources/audio_service_static_check.json
+resources/local_weights_deletion_manifest_20261014.json
+
+# Local verification scripts and tests
+tests/
+web/tests/
+scripts/verify_resources.py
+
+# Model binaries and private credentials
+*.bin
+*.h5
+*.hdf5
+*.engine
+*.trt
+*.pem
+*.key
+*.p12
