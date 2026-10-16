@@ -245,7 +245,7 @@ npm run dev -- --host 0.0.0.0 --port 9010
 
 本仓库目前不是下载后即可端到端运行的成品，缺口如下：
 
-1. **模型文件**：模型权重已从本机移除，统一从 [AGAiChiChaoFen/EmoCompanion](https://modelscope.cn/datasets/AGAiChiChaoFen/EmoCompanion) 下载。下载并合并到目标目录后，清单与 SHA256 见 `resources/main_model_manifest.json`，可运行 `python scripts/verify_resources.py --hash` 核验。未下载权重时不要启动模型服务。
+1. **模型文件**：模型权重已从本机移除，统一从 [AGAiChiChaoFen/EmoCompanion](https://modelscope.cn/datasets/AGAiChiChaoFen/EmoCompanion) 下载。下载后按上述目录结构放置模型文件。
 2. **运行环境**：参考硬件为 NVIDIA RTX PRO 6000；还需要 Linux/WSL、CUDA、与 Ditto/LiveTalking 兼容的 PyTorch、TensorRT/FFmpeg 依赖，以及可用的 Conda 环境。Windows 原生不能直接执行 `start_emocompanion.sh`。其他显卡需要重新核对显存、CUDA、TensorRT 和 bfloat16 支持情况。
 3. **依赖版本隔离**：PersonaVLM 官方要求 `transformers==4.51.3`，而 `LiveTalking/requirements.txt` 固定 `transformers==4.46.2`。建议为 PersonaVLM 和 LiveTalking 建立独立 Conda 环境并分别启动服务；若合并环境，必须自行验证导入和推理兼容性。
 4. **语音识别**：默认 `QWENAUDIO_API_URL` 指向独立 QwenAudio HTTP 服务（9000 只调用它）。本地源码与权重已加入 `Audio-Emotion-Analysis/`，需更新其模型路径、建立独立 uv 环境并部署 `/asr`；本地 Qwen2-Audio 推理不需要云端 ASR 凭据。

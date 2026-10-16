@@ -185,7 +185,7 @@ Open `http://localhost:9010/integrated-system`. `npm run build` only builds the 
 
 The repository is not currently an end-to-end runnable package without additional setup:
 
-1. Model files have been removed from this local source tree and are published in [AGAiChiChaoFen/EmoCompanion](https://modelscope.cn/datasets/AGAiChiChaoFen/EmoCompanion). Download and merge them first, then use `resources/main_model_manifest.json` and `python scripts/verify_resources.py --hash` to verify the target directories. Do not start model services before downloading them.
+1. Model files have been removed from this local source tree and are published in [AGAiChiChaoFen/EmoCompanion](https://modelscope.cn/datasets/AGAiChiChaoFen/EmoCompanion). Download the model files and place them in the directory structure described above.
 2. The reference hardware is an NVIDIA RTX PRO 6000. Also prepare Linux/WSL, CUDA, compatible PyTorch/TensorRT/FFmpeg dependencies, and a Conda environment. Other GPUs require a fresh check of memory, CUDA, TensorRT, and bfloat16 support.
 3. Keep dependency versions isolated: PersonaVLM requires `transformers==4.51.3`, while `LiveTalking/requirements.txt` pins `transformers==4.46.2`.
 4. Deploy the included `Audio-Emotion-Analysis` service with its own uv environment and updated model paths; its `/asr` contract matches `QWENAUDIO_API_URL`.
